@@ -9,7 +9,8 @@ $(document).ready(function(){
 	// getRandomCocktailData().then(dataPullSuccess, dataPullFail);
 	// getDrinkByLiquor(vod).then(dataPullSuccess, dataPullFail);
 
-	// getRandMovieByRating(lowrat,highrat).then(rouletteSuccess,rouletteFail);
 	// getYelpData().then(yelpSuccess,yelpFail);
+
 	getMovieDB().then(movieDataSuccess, movieDataFail);
+	getGenreList().then(genrePullSuccess, genrePullFail);
 });
