@@ -27,3 +27,21 @@ html,body{
 	height: 100%;
 	border: 1px solid;
 }
+
+#cocktailImgDiv {
+	height: 200px;
+	width: 200px;
+	position: relative;
+}
+
+#randomCocktailImgDisplay {
+	border: 1px solid black;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#randomCocktailImgDisplay img {
+	background-size: contain;
+}
+
