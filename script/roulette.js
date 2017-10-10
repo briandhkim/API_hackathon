@@ -8,7 +8,7 @@ function getRandMovieByRating(lowR,highR){
 	$.ajax({
 		url: 'https://netflixroulette.net/api/api.php',
 		dataType: 'json',
-		method: 'post',
+		method: 'get',
 		data: {
 			'genre' : 'All',
 			'movies': 'true',

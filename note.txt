@@ -1,0 +1,21 @@
+12:00 pm Tuesday -
+
+Cocktail DB- Eric
+with retrieved data get:
+	img src	(string) - strDrinkThumb
+	name of the drink (string)
+	ingridients [array]
+	instructions (string)
+	strMeasure [array] -index has to match ingridient
+	
+
+Netflix Roulette - Ian
+isolate movie/tv by:
+	genre/category
+	rating
+with retrieved data get:
+	title
+	poster
+	rating
+
+	
