@@ -1,3 +1,4 @@
+var movieList = [];
 function getRandMovieByRating(){
 	var promise = {
 		then: function(resolve, reject){
@@ -13,10 +14,12 @@ function getRandMovieByRating(){
 			var shadowDom = new DOMParser()
                 .parseFromString(serverData, "text/html");
             var movieElements = $(shadowDom).find('.iw-title');
-            var movieList = [];
+            // var movieList = [];
             movieElements.each(function(){
             	var movie = {}
             	movie.title = $(this).find('.title-link').text();
+            	movie.image = $(this).find('.iw-boxart').attr('src');
+            	movie.genre = $(this).find('.genres').text();
             	movieList.push(movie);
             });
             console.log(movieList);
@@ -27,6 +30,23 @@ function getRandMovieByRating(){
 	});
 	return promise;
 }
+
+function random(){
+	var randomIndex = Math.floor(Math.random() * movieList.length);
+	console.log(movieList[randomIndex]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 function rouletteSuccess(dat){
 	console.log(dat);
