@@ -1,0 +1,29 @@
+html,body{
+	overflow-x:hidden;
+}
+
+.navbar{
+	margin-bottom: 0;
+}
+.hamburger{
+	display: none !important;
+}
+/* !!!!!!! check menu display function in js !!!!!!!!*/
+@media screen and (max-width: 767px){
+	.hamburger{
+		display: inline-block !important;
+	}
+	.navbar-nav{
+		text-align: center;
+	}
+}
+
+/*end of nav content css*/
+.main-body{
+	height: 94.7vh;
+	/*background-color: lightblue;*/
+}
+.main-body>div{
+	height: 100%;
+	border: 1px solid;
+}
