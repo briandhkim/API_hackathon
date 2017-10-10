@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function getRandMovieByRating(){
 	var promise = {
 		then: function(resolve, reject){
@@ -35,5 +34,4 @@ function rouletteSuccess(dat){
 function rouletteFail(dat){
 	console.log(dat);
 }
-=======
->>>>>>> 7c7dedf8aca4271f36f4f07dbff59b77a60959d6
+
