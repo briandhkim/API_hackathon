@@ -1,5 +1,7 @@
+
 var movieList = [];
-function getRandMovieByRating(){
+
+function grabMoviesFromDataBase(){
 	var promise = {
 		then: function(resolve, reject){
 			this.resolve = resolve;
@@ -33,9 +35,11 @@ function getRandMovieByRating(){
 
 function random(){
 	var randomIndex = Math.floor(Math.random() * movieList.length);
-	console.log(movieList[randomIndex]);
-}
+	var imgTag = $('<img>').attr('src', movieList[randomIndex].image).css('height', '100em');
+	$('.display_movie_title').append(movieList[randomIndex].title);
+	$('.display_movie_poster').append(imgTag);
 
+}
 
 
 

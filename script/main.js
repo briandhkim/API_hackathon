@@ -1,6 +1,11 @@
 var vod = "Vodka";
 var lowrat = '2.0';
 var highrat = '4.0';
+
+var model = new Model();
+var view = new View();
+var control = new Control();
+
 /***/
 var randomCocktailName = null;
 var randomCocktailImageSource = null;
@@ -9,9 +14,12 @@ var ingredientsArrayFiltered = [];
 var measuresArray = [];
 var measuresArrayFiltered = [];
 
+
 $(document).ready(function(){
 	$('#top-filler').css('height',$('nav').height());
 	$('#randomCocktailButton').on('click',handleRandomCocktailDataClick);
+    grabMoviesFromDataBase();
+    $('.spin').on('click', random)
 	// getData().then(dataPullSuccess,dataPullFail);
 
 	// getRandomCocktailData().then(dataPullSuccess, dataPullFail);
