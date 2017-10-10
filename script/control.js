@@ -1,1 +1,3 @@
-control.js
+function Control(){
+
+}
