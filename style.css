@@ -27,3 +27,23 @@ html,body{
 	height: 100%;
 	border: 1px solid;
 }
+
+#randomCocktailImgDisplay {
+	border: 1px solid black;
+	height: 250px;
+	width: 250px;
+}
+
+.cocktailImage {
+	height: 250px;
+	width: 250px;
+}
+
+#randomCocktailIngredientsDisplay {
+	display: inline-block;
+}
+
+#randomCocktailMeasuresDisplay {
+	display: inline-block;
+	float: right;
+}
