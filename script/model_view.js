@@ -30,3 +30,24 @@ function Model(){
 	this.movieDB_attachImgTo ='https://image.tmdb.org/t/p/w500';
 	/**** end of data fetched from movieDB ****/
 }
+
+
+function View(){
+
+	/*
+		evaluate the data received from movieDB
+		call function from view to update DOM
+		assign appropriate input from DOM to values in Model
+			this will be in the user search parameter area for the values
+	*/ 
+	this.randomMovieButton(){
+
+	}
+
+	/*
+		get a random movie from the netflix data on load and update dom with the info
+	*/
+	this.getRandomMovieFromStart(){
+
+	}
+}
