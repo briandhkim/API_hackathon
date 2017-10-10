@@ -2,9 +2,9 @@ var vod = "Vodka";
 var lowrat = '2.0';
 var highrat = '4.0';
 
-var model = new Model();
-var view = new View();
-var control = new Control();
+// var model = new Model();
+// var view = new View();
+// var control = new Control();
 
 /***/
 var randomCocktailName = null;
@@ -16,19 +16,31 @@ var measuresArrayFiltered = [];
 
 
 $(document).ready(function(){
-	$('#top-filler').css('height',$('nav').height());
 	$('#randomCocktailButton').on('click',handleRandomCocktailDataClick);
-    grabMoviesFromDataBase();
-    $('.spin').on('click', random)
-	// getData().then(dataPullSuccess,dataPullFail);
-
 	// getRandomCocktailData().then(dataPullSuccess, dataPullFail);
 	// getDrinkByLiquor(vod).then(dataPullSuccess, dataPullFail);
 
-	// getYelpData().then(yelpSuccess,yelpFail);
-
     // getMovieDB().then(movieDataSuccess, movieDataFail);
+    $('.yelpOpen').click(yelpOpenClick);
+    $('.cocktailOpen').click(cocktailOpenClick);
+    $('.movieOpen').click(movieOpenClick);
 });
+
+
+function yelpOpenClick(){
+	$('.yelpDisplay').css('display','block');
+	$('.cocktailDisplay, .movieDisplay').css('display','none');
+}
+function cocktailOpenClick(){
+	$('.cocktailDisplay').css('display', 'block');
+	$('.yelpDisplay, .movieDisplay').css('display','none');
+}
+function movieOpenClick(){
+	$('.movieDisplay').css('display','block');
+	$('.yelpDisplay, .cocktailDisplay').css('display','none');
+}
+
+
 
 /*****start of eric's js edit*****/
 
