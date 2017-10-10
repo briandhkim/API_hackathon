@@ -1,4 +1,4 @@
-function getRandMovieByRating(lowR,highR){
+function getRandMovieByRating(){
 	var promise = {
 		then: function(resolve, reject){
 			this.resolve = resolve;
@@ -6,21 +6,20 @@ function getRandMovieByRating(lowR,highR){
 		}
 	};
 	$.ajax({
-		url: 'https://netflixroulette.net/api/api.php',
-		dataType: 'json',
+		url: 'http://localhost:8888/C9.17_hackathon2/server/getCurrentMovies.php',
+		dataType: 'text',
 		method: 'get',
-		data: {
-			'genre' : 'All',
-			'movies': 'true',
-			'tv' :'true',
-			'lowrating': lowR,
-			'highrating' : highR,
-			'director' :'none',
-			'actor' : 'none',
-			'keyword' : 'none'
-		},
-		success: function(showData){
-			promise.resolve(showData);
+		success: function(serverData){
+			var shadowDom = new DOMParser()
+                .parseFromString(serverData, "text/html");
+            var movieElements = $(shadowDom).find('.iw-title');
+            var movieList = [];
+            movieElements.each(function(){
+            	var movie = {}
+            	movie.title = $(this).find('.title-link').text();
+            	movieList.push(movie);
+            });
+            console.log(movieList);
 		},
 		error: function(err){
 			promise.resolve(err);
@@ -35,3 +34,4 @@ function rouletteSuccess(dat){
 function rouletteFail(dat){
 	console.log(dat);
 }
+
