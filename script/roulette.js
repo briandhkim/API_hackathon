@@ -1,5 +1,5 @@
 var movie = {};
-grabMoviesFromDataBase()
+
 
 function grabMoviesFromDataBase(){
 	var promise = {
@@ -19,9 +19,11 @@ function grabMoviesFromDataBase(){
        			var holdMovieTitle = $(this).find('.title')[0];
             	movie.title = $(holdMovieTitle).text();
             	movie.image = $(this).find('.iw-boxart').attr('src');
-            	var holdLink = $(this).find('.action-play')[0]; // Needs fixing
+            	var holdLink = $(this).find('.action-play')[0]; 
             	movie.link = $(holdLink).attr('href');
             	movie.rating = $(this).find('.average_rating').text();
+            	var holdMovieSynopsis = $(this).find('.synopsis')[0];
+            	movie.synopsis = $(holdMovieSynopsis).text();
 
             
             });
@@ -47,12 +49,16 @@ function grabMoviesFromDataBase(){
 // 	$('.netflixMoviePoster').attr('src', movieList[randomIndex].image)
 // }
 
-function render(){
-	$('.netflixMovieTitle').text(movie.title);
+function render(){ 
+	var setDecimalForMovieRating = parseFloat(movie.rating);
+	$('.netflixTitleSpan').text(movie.title);
 	$('.netflixMoviePoster').attr('src', movie.image);
 	$('.sendToNetflix').attr('href', movie.link);
-	$('.addRating').text(movie.rating);
+	$('.netflixSummary').text(movie.synopsis);
+	$('.netflixRating').text(setDecimalForMovieRating.toFixed(1));
 }
+
+
 
 
 
