@@ -24,6 +24,7 @@ $(document).ready(function(){
     $('.yelpOpen').click(yelpOpenClick);
     $('.cocktailOpen').click(cocktailOpenClick);
     $('.movieOpen').click(movieOpenClick);
+    getYelpData().then(yelpSuccess,yelpFail);
 });
 
 

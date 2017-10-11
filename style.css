@@ -65,12 +65,20 @@ html,body{
 	display: none;
 }
 .qualityMovie{
-	height: 45%;
+	height: 50%;
 	/*width: 100%;*/
 	/*border: 1px solid;*/
 }
+.netflixMovieTitleButton, .netflixMoviePoster{
+	height: 100%;
+	/*border: 1px solid green;*/
+}
+.netflixMovieTitle, .netflixMovieButton{
+	height: 50%;
+	border: 1px solid green;
+}
 .movieDB{
-	height: 55%;
+	height: 50%;
 	border: 1px solid;
 }
 .posterArea, .movieContentArea{
@@ -81,6 +89,9 @@ html,body{
 	height: 20%;
 	font-size: 1.9rem;
 	border: 1px solid;
+}
+.netflixMoviePoster{
+	/*max-height: 100%;*/
 }
 /*movieDisplay end*/
 
