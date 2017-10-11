@@ -27,12 +27,13 @@ function getRandomCocktailData(){
 }
 function dataPullSuccess(drink_data){
 	console.log(drink_data);
+
 }
 function dataPullFail(err){
 	console.log(err);
 }
 
-getRandomCocktailData().then(dataPullSuccess,dataPullFail);
+// getRandomCocktailData().then(dataPullSuccess,dataPullFail);
 
 /*****/
 // function getDrinkByLiquor(liquor){

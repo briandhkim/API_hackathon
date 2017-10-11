@@ -18,28 +18,15 @@ var drinkByIngredientArray = [];
 
 
 $(document).ready(function(){
-	$('#randomCocktailButton').on('click',handleRandomCocktailDataClick);
-<<<<<<< HEAD
-	$('#vodkaButton').on('click',handleCocktailByIngredientClick);
-	$('#scotchButton').on('click',handleCocktailByIngredientClick);
-    $('#tequilaButton').on('click',handleCocktailByIngredientClick);
-    $('#ginButton').on('click',handleCocktailByIngredientClick);
-    $('#rumButton').on('click',handleCocktailByIngredientClick);
-    $('#bourbonButton').on('click',handleCocktailByIngredientClick);
-    $('#brandyButton').on('click',handleCocktailByIngredientClick);
-    $('#beerButton').on('click',handleCocktailByIngredientClick);
-
 	// getData().then(dataPullSuccess,dataPullFail);
-
-=======
->>>>>>> 75ecb821ec52b5533e02758d18cb7c2ca86b6966
 	// getRandomCocktailData().then(dataPullSuccess, dataPullFail);
 	// getDrinkByLiquor(vod).then(dataPullSuccess, dataPullFail);
-
     // getMovieDB().then(movieDataSuccess, movieDataFail);
     $('.yelpOpen').click(yelpOpenClick);
     $('.cocktailOpen').click(cocktailOpenClick);
     $('.movieOpen').click(movieOpenClick);
+    // $('#drinkButton').click(handleRandomCocktailDataClick);
+    selectFunction();
 });
 
 
@@ -71,34 +58,45 @@ function handleCocktailByIngredientClick(){
     $('#drinkButtonResponseDiv').append(drinkListButton);
 }
 
-function sendCocktailByIngredient(){
-    console.log(drinkByIngredient.drinks);
-    for(var i=0; i<drinkByIngredient.drinks.length; i++){
-        drinkByIngredientArray.push(drinkByIngredient.drinks[i].strDrink);
-    }
-    console.log(drinkByIngredientArray);
-    for(var j=0; j<drinkByIngredientArray.length; j++){
-        var drinkListDiv = $('<div>');
-        $('#drinkList').append(drinkListDiv);
-        var drinkButton = $('<button>'); //onclick
-        $(drinkListDiv).append(drinkButton);
-        $(drinkButton).append(drinkByIngredientArray[j]);
-    }
-}
+// function sendCocktailByIngredient(){
+//     console.log(drinkByIngredient.drinks);
+//     for(var i=0; i<drinkByIngredient.drinks.length; i++){
+//         drinkByIngredientArray.push(drinkByIngredient.drinks[i].strDrink);
+//     }
+//     console.log(drinkByIngredientArray);
+//     for(var j=0; j<drinkByIngredientArray.length; j++){
+//         var drinkListDiv = $('<div>');
+//         $('#drinkList').append(drinkListDiv);
+//         var drinkButton = $('<button>'); //onclick
+//         $(drinkListDiv).append(drinkButton);
+//         $(drinkButton).append(drinkByIngredientArray[j]);
+//     }
+// }
 
 /*****//*****//*****//*****//*****//*****//*****//*****//*****//*****/
 
+function selectFunction(){
+	if($('option').val() === 'random'){
+        getRandomCocktailData().then(dataPullSuccess,dataPullFail);
+        $('#drinkButton').click(handleRandomCocktailDataClick);
+	}
+	// else if ($('option').val() === 'vodka'){
+     //    liquor = $('option').val();
+     //    getCocktailByIngredient().then(dataPullSuccess,dataPullFail);
+     //    $('#drinkButton').click(handleCocktailByIngredientClick);
+	// }
+}
+
 function handleRandomCocktailDataClick(){
+    getRandomCocktailData().then(dataPullSuccess,dataPullFail);
     sendRandomCocktailData();
 }
 
 function sendRandomCocktailData(){
     randomCocktailName = randomDrinkData.drinks[0].strDrink;
-    $('#randomCocktailDisplay').text('Drink Name: ' + randomCocktailName);
-    var newImgTag = $('<img>').addClass('cocktailImage');
-    $('#randomCocktailImgDisplay').append(newImgTag);
+    $('.drinkName').text(randomCocktailName);
     randomCocktailImageSource = randomDrinkData.drinks[0].strDrinkThumb;
-    $(newImgTag).attr('src', randomCocktailImageSource);
+    $('.randomCocktailImg').attr('src', randomCocktailImageSource);
 
     randomCocktailIngredients();
     randomCocktailMeasures();
@@ -117,8 +115,8 @@ function randomCocktailIngredients(){
 		}
 	}
 	for(var n=0; n<ingredientsArrayFiltered.length; n++){
-		var ingredientsDiv = $('<div>');
-        $('#randomCocktailIngredientsDisplay').append(ingredientsDiv);
+        var ingredientsDiv = $('<div>');
+        $('.ingredientsDiv').append(ingredientsDiv);
         $(ingredientsDiv).append(ingredientsArrayFiltered[n] + " : ");
 	}
 }
@@ -134,23 +132,17 @@ function randomCocktailMeasures(){
             measuresArrayFiltered.push(measuresArray[j]);
         }
     }
+    //$('.measuresDiv').remove();
     for(var n=0; n<measuresArrayFiltered.length; n++){
         var measuresDiv = $('<div>');
-        $('#randomCocktailMeasuresDisplay').append(measuresDiv);
+        $('.measuresDiv').append(measuresDiv);
         $(measuresDiv).append(measuresArrayFiltered[n]);
     }
 }
 
 function randomCocktailDirections(){
-    var underlineTag = $('<u></u>');
-    $('#instructionsHeader').append(underlineTag);
-    var newHeader = $('<h4>');
-    $(underlineTag).append(newHeader);
-    $(newHeader).text('Instructions: ');
-	var instructionsDiv = $('<div>');
-	$('#randomCocktailInstructionsDisplay').append(instructionsDiv);
 	randomCocktailInstructions = randomDrinkData.drinks[0].strInstructions;
-	$(instructionsDiv).text(randomCocktailInstructions);
+    $('.instructions').text(randomCocktailInstructions);
 }
 
 /*****end of eric's js edit*****/

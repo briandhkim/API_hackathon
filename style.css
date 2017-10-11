@@ -108,3 +108,12 @@ html,body{
 	display: inline-block;
 	float: right;
 }*/
+
+.ingredientsDiv {
+	display: inline-block;
+}
+
+.measuresDiv {
+	display: inline-block;
+	position: absolute;
+}
