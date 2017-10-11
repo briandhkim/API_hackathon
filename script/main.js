@@ -25,8 +25,14 @@ $(document).ready(function(){
     $('.yelpOpen').click(yelpOpenClick);
     $('.cocktailOpen').click(cocktailOpenClick);
     $('.movieOpen').click(movieOpenClick);
+
     // $('#drinkButton').click(handleRandomCocktailDataClick);
     selectFunction();
+
+    $('#movieDBbutton').click(movieDbButtonClick);
+    // getYelpData().then(yelpSuccess,yelpFail);
+    getGenreList().then(genrePullSuccess,genrePullFail);
+
 });
 
 

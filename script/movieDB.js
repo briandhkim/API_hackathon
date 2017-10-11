@@ -14,6 +14,7 @@ function getMovieDB(){
 		"primary_release_year" input-e.g. (int) 2015
 		"with_genres" input-e.g. (string) Action , Adventure , Science Fiction
 					likely only one at a time for genre
+		"primary_release_year" input-e.g. (int) 2015
 	*/ 
 	$.ajax({
 		url: 'https://api.themoviedb.org/3/discover/movie',
@@ -36,13 +37,13 @@ function getMovieDB(){
 	});
 	return promise;
 }
-
 function movieDataSuccess(dataM){
 	console.log(dataM);
 }
 function movieDataFail(err){
 	console.log(err);
 }
+
 
 function getGenreList(){
 	var promise = {
@@ -68,8 +69,35 @@ function getGenreList(){
 	return promise;
 }
 function genrePullSuccess(genres){
-	console.log(genres);
+	console.log(genres.genres);
+	// genres.genres returns index of objects
+			// e.g. - id: 12, name: 'action'
+	for (var idx in genres.genres){
+		var opt = $('<option>',{
+			value : ''+ genres.genres[idx].id,
+			text : genres.genres[idx].name
+		});
+		$('#genreSelect').append(opt);
+	}
+	for (var i=0; i<11; i++){
+		var rng = $('<option>',{
+			value : ''+i,
+			text: i
+		});
+		$('#minMovieRange, #maxMovieRange').append(rng);
+	}
 }
 function genrePullFail(err){
 	console.log(err);
+}
+
+
+function movieDbButtonClick(){
+	var minRating = $('#minMovieRange').val();	//returns null if nothing selected
+	var maxRating = $('#maxMovieRange').val();
+	var genre = $('#genreSelect').val();	//returns null if nothing selected
+	var minYear = $('#minimumYear').val();	//returns undefined if nothing is in input
+	var maxYear = $('#maximumYear').val();
+
+	console.log(minYear, maxYear);
 }

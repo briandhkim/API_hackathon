@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--<script type="text/javascript" src="script/"></script>-->
-    <script type="text/javascript" src="script/yelp.js"></script>
+
     <script type="text/javascript" src="script/movieDB.js"></script>
+    <script type="text/javascript" src="script/yelp.js"></script>
     <script type="text/javascript" src="script/cocktail.js"></script>
     <script type="text/javascript" src="script/roulette.js"></script>
     <script type="text/javascript" src="script/main.js"></script>
@@ -73,20 +73,81 @@
 				</div>	<!--cocktailDisplay end-->
 				<div class="movieDisplay">
 					<div class="col-xs-12 qualityMovie">		<!--Ian api-->
-						
+						<!-- <div class="display_movie_title"></div>
+						<div class="display_movie_button"></div>
+						<div class="display_movie_poster"></div> -->
+						<div class="col-sm-8 netflixMovieTitleButton">
+							<div class="row netflixMovieTitle">
+								
+							</div>
+							<div class="row netflixMovieButton">
+								
+							</div>
+						</div>
+						<div class="col-sm-4 netflixMoviePoster view">
+							<div class="view overlay hm-zoom">
+								<img src="https://i.pinimg.com/736x/fd/5e/66/fd5e662dce1a3a8cd192a5952fa64f02--classic-poster-classic-movies-posters.jpg" class="netflixMoviePoster img-fluid" alt="netflix poster">
+								<div class="mask"></div>
+							</div>
+						</div>
 					</div>
 					<div class="col-xs-12 movieDB">	<!--movieDB content and roulette-->
 						<div class="col-sm-4 posterArea view">
 							<div class="view overlay hm-zoom">
-								<img src="https://image.tmdb.org/t/p/w640/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" class=" movieDbPoster img-fluid" alt="movie poster">
+								<img src="https://image.tmdb.org/t/p/w640/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" class="movieDbPoster img-fluid" alt="movie poster">
 								<div class="mask"></div>
 							</div>
 						</div>	<!--end of posterArea div-->
 						<div class="col-sm-8 movieContentArea">
 							<div class="row movieDbTitle text-center">
-								<h1 class="h1-responsive movTitle"> Star Wars <small>rating : 4/5</small></h1>
+								<h1 class="h1-responsive movTitle"> Star Wars <small>rating: <span class="movieDBrating">7.5</span></small></h1>
 							</div>
-							<div class="col-"></div>
+							<div class="row movieDbInput text-center">
+								<div class="col-sm-6 movieDbRating">
+									<h5 class="movieDbRatingTitle h5-responsive">
+										Choose content rating range
+									</h5>
+									<div class="col-sm-6 movieDbMinRange">
+										Minimum Rating
+										<select id="minMovieRange">
+											<option value="" disabled selected hidden>--</option>
+										</select>
+									</div>
+									<div class="col-sm-6 movieDbMaxRange">
+										Maximum Rating
+										<select id="maxMovieRange">
+											<option value="" disabled selected hidden>--</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-6 movieDbGenre">
+									<h5 class="h5-responsive movieDbGenreTitle">
+										Choose content genre
+									</h5>
+									<select id="genreSelect">
+										<option value="" disabled selected hidden>--none--</option>
+									</select>
+								</div>
+								<div class="col-sm-6 movieDbYear">
+									<h5 class="h5-responsive movieDbYearTitle">
+										Chose content release time
+									</h5>
+									<div class="col-sm-6 movieDbYearMin">
+										Minimum year range
+										<input type="text" id="minimumYear" name="minYear" placeholder="e.g. 1970">
+									</div>
+									<div class="col-sm-6 movieDbYearMax">
+										Maximum year range
+										<input type="text" id="maximumYear" name="maxYear" placeholder = "e.g. 2049">
+									</div>
+								</div>
+								<div class="col-sm-6 movieDbButton">
+									<h5 class="h5-responsive movieDbButtonTitle">
+										Find a movie
+									</h5>
+									<button class="btn btn-lg btn-default" id="movieDBbutton">Load</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -105,5 +166,9 @@
 
 		</div>
 	</div>	<!--end of overall container-fluid div-->
+
+
+
+
 </body>
 </html>
