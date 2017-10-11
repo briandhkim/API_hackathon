@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> <!--cinzel font for drinks section-->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Prociono" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -102,9 +106,9 @@
 						</div>	<!--end of posterArea div-->
 						<div class="col-sm-8 movieContentArea">
 							<div class="row movieDbTitle text-center">
-								<h1 class="h1-responsive"> <span class="movTitle">Star Wars</span> <small>rating: <span class="movieDBrating">7.5</span></small></h1>
+								<h1 class="h1-responsive"> <span class="movTitle">Star Wars</span> <small class="ratingTxt">rating: <span class="movieDBrating">7.5</span></small></h1>
 							</div>
-							<div class="row movieDbInput text-center">
+							<div class="row movieDbInput text-center unique-color">
 								<div class="col-sm-6 movieDbRating">
 									<h5 class="movieDbRatingTitle h5-responsive">
 										Choose content rating range
@@ -145,7 +149,7 @@
 								</div>
 								<div class="col-sm-6 movieDbButton">
 									<h5 class="h5-responsive movieDbButtonTitle">
-										Find a movie
+										search movie
 									</h5>
 									<button class="btn btn-lg btn-default" id="movieDBbutton">Load</button>
 								</div>
@@ -163,14 +167,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="yelpOpen">
-
+				<div class="yelpOpen view">
+					<div class="view overlay hm-zoom hm-white-light">
+						<img src="assets/foodStock.png" class="img-fluid">
+						<div class="mask flex-center">
+							<p>food</p>
+						</div>
+					</div>
 				</div>
-				<div class="cocktailOpen">
-					
+				<div class="cocktailOpen view">
+					<div class="view overlay hm-zoom hm-white-light">
+						<img src="assets/drinkStock.png" class="img-fluid">
+						<div class="mask flex-center">
+							<p>DRINKS</p>
+						</div>
+					</div>
 				</div>
-				<div class="movieOpen">
-					
+				<div class="movieOpen view">
+					<div class="view overlay hm-zoom hm-white-strong">
+						<img src="assets/filmStock.png" class="img-fluid">
+						<div class="mask flex-center">
+							<p>MOVIES</p>
+						</div>
+					</div>
 				</div>
 			</div>		<!--end of selectDisplay-->
 		</div>

@@ -1,6 +1,20 @@
 html,body{
 	overflow-x:hidden;
 }
+@font-face{
+	font-family: netflixFont;
+	src: url('assets/nfxFont.ttf');
+}
+@font-face{
+	font-family: yelpFont;
+	src: url('assets/yelpFont2.ttf');
+}
+/*	font-family: 'Ubuntu Condensed', sans-serif;
+	font-family: 'Cinzel', serif;
+	font-family: 'Playfair Display SC', serif;
+	font-family: 'Prociono', serif;
+*/
+/*https://www.yelp.com/styleguide*/
 
 .main-body{
 	height: 100vh;
@@ -87,18 +101,46 @@ html,body{
 }
 .movieDbTitle{
 	height: 20%;
-	font-size: 1.9rem;
+	font-size: 1.5rem;
 	border: 1px solid;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	font-family: 'Playfair Display SC', serif;
+	color: white;
+	text-shadow: 
+	1px 1px 0 #000,
+	-1px -1px 0 #000,
+	2px 2px 0 #000,
+	3px 3px 0 #000;
+}
+.ratingTxt, .movieDbInput h5, .movieDbInput div{
+	font-family: 'Prociono', serif;
+	color: #cfd8dc;
+}
+.movieDbInput select, .movieDbInput input, .movieDbInput button{
+	font-family: 'Playfair Display SC', serif;
+	color: black;
+	text-shadow:
+	1px 1px 0 #fff;
+}
+.movieDbInput h5{
+	height: 30%;
+	font-size: 3vh;
+	color: rgb(240,240,240);
+	text-shadow: 
+	1px 1px 0 #000,
+	-1px -1px 0 #000;
 }
 .movieDbInput{
 	height: 80%;
 }
 .movieDbInput > div{
 	height: 50%;
-	border: 1px solid red;
+	border: 1px solid /*r*/ed;
+}
+#movieDBbutton{
+	font-size: 2vh;
 }
 
 /*movieDisplay end*/
@@ -111,10 +153,36 @@ html,body{
 	border: 1px solid green;
 }
 .yelpOpen, .cocktailOpen, .movieOpen{
-	height: 28.333%;
+	height: 27.5%;
+	margin-top: 3px;
+	border-radius: 20px;
 	border : 1px solid orange;
 }
-
+.yelpOpen{
+	font-family: yelpFont;
+	color: #d32323;
+	background-color: #d32323;
+	font-size: 9vh;
+	text-shadow: 
+	-2px -2px 0 #000,
+	1px 1px 0 #000,
+	-1px -1px 0 #000,
+	2px 2px 0 #000,
+	3px 3px 0 #000;
+}
+.cocktailOpen{
+	background-color: #4285F4;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 5vh;
+}
+.movieOpen{
+	font-family: netflixFont;
+	font-size: 10vh;
+	background-color: rgb(219,0,0);
+}
+.movieOpen>div, .movieOpen>div>img, .cocktailOpen>div, .yelpOpen>div{
+	height: 100%;
+}
 /*#randomCocktailImgDisplay {
 	border: 1px solid black;
 	height: 250px;
