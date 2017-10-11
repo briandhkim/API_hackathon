@@ -54,20 +54,30 @@
 						<div class="col-sm-7 cocktailNameIngButton">
 							<div class="row ingredientAndInstruction">
 								<h3 class="h3-responsive"><u>Ingredients</u></h3>
-								<div class="ingredientsDiv"></div>
-								<div class="measuresDiv"></div>
+								<div id="ingredientsContainer">
+									<div class="ingredientsDiv"></div>
+									<div class="measuresDiv"></div>
+								</div>
 								<h3 class="h3-responsive"><u>Instructions</u></h3>
 								<p class="instructions"> drink instructions </p>
 							</div>
 							<div class="row dropDownAndButton">
 								<div class="col-sm-6 liquorDrop">
 									<select>
-										<option value="random">Random</option>
-										<option value="vodka">Vodka</option>
+										<option value="Random">Random</option>
+										<option value="Vodka">Vodka</option>
+										<option value="Scotch">Scotch</option>
+										<option value="Tequila">Tequila</option>
+										<option value="Gin">Gin</option>
+										<option value="Rum">Rum</option>
+										<option value="Bourbon">Bourbon</option>
+										<option value="Brandy">Brandy</option>
+										<option value="Beer">Beer</option>
 									</select>
+									<button id="confirmButton">Confirm</button>
 								</div>
-								<div id="drinkButton">
-									<button>Get drink</button>
+								<div>
+									<button id="drinkButton">Get Random Drink</button>
 								</div>
 							</div>
 						</div>		<!--end of cocktailNameIngButton-->
