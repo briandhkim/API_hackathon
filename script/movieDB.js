@@ -101,7 +101,7 @@ function movieDataSuccess(dataM){
 		dataM.results[i].backdrop_path --> background poster
 		concat imgSrc to -- 'https://image.tmdb.org/t/p/w500'
 	*/ 
-	console.log(dataM);
+	// console.log(dataM);
 	var i = Math.floor(Math.random()*20);
 	var movie = dataM.results[i];
 	$('.movieDbPoster').attr('src', "https://image.tmdb.org/t/p/w500"+movie.poster_path);

@@ -18,10 +18,8 @@ var drinkByIngredientArray = [];
 
 
 $(document).ready(function(){
-	// getData().then(dataPullSuccess,dataPullFail);
 	// getRandomCocktailData().then(dataPullSuccess, dataPullFail);
 	// getDrinkByLiquor(vod).then(dataPullSuccess, dataPullFail);
-    // getMovieDB().then(movieDataSuccess, movieDataFail);
     $('.yelpOpen').click(yelpOpenClick);
     $('.cocktailOpen').click(cocktailOpenClick);
     $('.movieOpen').click(movieOpenClick);
@@ -29,10 +27,13 @@ $(document).ready(function(){
     // $('#drinkButton').click(handleRandomCocktailDataClick);
     selectFunction();
 
+    // functions for movieDB api
     $('#movieDBbutton').click(movieDbButtonClick);
-    // getYelpData().then(yelpSuccess,yelpFail);
     getGenreList().then(genrePullSuccess,genrePullFail);
+    movieDbButtonClick();   //do one random gen on load
+    // end of functions for movieDB api
 
+    // getYelpData().then(yelpSuccess,yelpFail);
 });
 
 

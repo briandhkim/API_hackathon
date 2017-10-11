@@ -75,13 +75,24 @@ html,body{
 
 
 .movieDisplay{
-	/*background-color: lightblue;*/
+	background-color: rgba(219,0,0,0.6);
 	/*display: none;*/
 }
-.qualityMovie{
-	height: 50%;
+.qualityMovie, .movieDB{
+	height: 47%;
 	/*width: 100%;*/
 	/*border: 1px solid;*/
+}
+.movieDisplayMessage{
+	height: 6%;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 135%;
+	/*color: white;*/
+	/*border: 1px solid;*/
+}
+.netflixText{
+	font-family: netflixFont;
+	font-size: 3rem;
 }
 .netflixMovieTitleButton, .netflixMoviePoster{
 	height: 100%;
@@ -91,10 +102,7 @@ html,body{
 	height: 50%;
 	border: 1px solid green;
 }
-.movieDB{
-	height: 50%;
-	/*border: 1px solid;*/
-}
+
 .posterArea, .movieContentArea{
 	height: 100%;
 	/*border: 1px solid orange;*/
