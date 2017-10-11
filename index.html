@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script/"></script>
     <script type="text/javascript" src="script/yelp.js"></script>
-    <script type="text/javascript" src="script/movieDB.js"></script>
     <script type="text/javascript" src="script/cocktail.js"></script>
     <script type="text/javascript" src="script/roulette.js"></script>
     <script type="text/javascript" src="script/main.js"></script>
@@ -15,38 +15,57 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid" id="navigation">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed hamburger" data-toggle="collapse" data-target=".navbar-collapse" data-parent="#accordion" aria-expanded="true">
-					<span class="hamburger-outer">
-						<span class="hamburger-inner glyphicon glyphicon-collapse-down" aria-hidden="true"></span>
-					</span>
-				</button>
-				<a class="navbar-brand" href="#">App title</a>
-			</div>	<!--end of navbar-header-->
-
-			<div class="collapse navbar-collapse" id="nav-options">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="#">Step 1</a>
-					</li>
-					<li>
-						<a href="#">Step 2</a>
-					</li>
-					<li>
-						<a href="#">Step 3</a>
-					</li>
-				</ul>
-			</div>
-		</div>	<!--end of container-fluid wrapping navbar content-->
-	</nav>	<!--end of navbar content-->
 
 	<div class="container-fluid">
-		<div id="top-filler"></div>
-
+		<!-- <div id="top-filler"></div> -->
 		<div class="row main-body">
+			<div class="col-sm-10 mainDisplay">
+				<div class="yelpDisplay">
+					
+				</div>
+				<div class="cocktailDisplay">
+					
+				</div>
+				<div class="movieDisplay">
+					<div class="col-xs-12 qualityMovie">		<!--Ian api-->
+						
+					</div>
+					<div class="col-xs-12 movieDB">	<!--movieDB content and roulette-->
+						<div class="col-sm-4 posterArea view">
+							<div class="view overlay hm-zoom">
+								<img src="https://image.tmdb.org/t/p/w640/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" class=" movieDbPoster img-fluid" alt="movie poster">
+								<div class="mask"></div>
+							</div>
+						</div>	<!--end of posterArea div-->
+						<div class="col-sm-8 movieContentArea">
+							<div class="row movieDbTitle text-center">
+								<h1 class="h1-responsive movTitle"> Star Wars <small>rating : 4/5</small></h1>
+							</div>
+							<div class="col-"></div>
+						</div>
+					</div>
+				</div>
+			</div>		<!--end of mainDisplay-->
+			<div class="col-sm-2 selectDisplay">
+				<div class="yelpOpen">
+
+				</div>
+				<div class="cocktailOpen">
+					
+				</div>
+				<div class="movieOpen">
+					
+				</div>
+			</div>		<!--end of selectDisplay-->
 		</div>
 	</div>	<!--end of overall container-fluid div-->
+
+
+<div class="movie_container">
+	<button class="spin">Spin</button>
+	<div class="display_movie_title"></div>
+	<div class="display_movie_genre"></div>
+	<div class="display_movie_poster"></div>
+</div>
 </body>
 </html>

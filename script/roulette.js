@@ -19,7 +19,7 @@ function getRandMovieByRating(){
             	movie.title = $(this).find('.title-link').text();
             	movieList.push(movie);
             });
-            console.log(movieList);
+            console.log(shadowDom);
 		},
 		error: function(err){
 			promise.resolve(err);
