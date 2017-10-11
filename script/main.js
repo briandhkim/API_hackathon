@@ -35,6 +35,7 @@ $(document).ready(function(){
 
     //functions for yelp api
     $('.yelpZipButton').click(yelpSearchButton);
+    yelpSearchButton();
 
     // get netflix data
     grabMoviesFromDataBase();
