@@ -1,5 +1,6 @@
 
-var movie = {}
+var movieList = [];
+
 function grabMoviesFromDataBase(){
 	var promise = {
 		then: function(resolve, reject){
@@ -14,13 +15,17 @@ function grabMoviesFromDataBase(){
 		success: function(serverData){
 			var shadowDom = new DOMParser()
                 .parseFromString(serverData, "text/html");
-            var movieElements = $(shadowDom).find('.title-detail-top');
-            	movie.title = $(this).find('.title').text();
+            var movieElements = $(shadowDom).find('.iw-container');
+            // var movieList = [];
+            movieElements.each(function(){
+            	var movie = {}
+            	movie.title = $(this).find('.title-link').text();
             	movie.image = $(this).find('.iw-boxart').attr('src');
-            	// movie.genre = $(this).find('.genres').text();
-            	// movieList.push(movie);
-          
-            console.log(shadowDom);
+            	var holdLink = $(this).find('.action-play')[0]; // Needs fixing
+            	movie.link = $(holdLink).attr('href')
+            	movieList.push(movie);
+            });
+            console.log(movieList);
 		},
 		error: function(err){
 			promise.resolve(err);
@@ -30,11 +35,14 @@ function grabMoviesFromDataBase(){
 }
 
 function random(){
-
-	var imgTag = $('<img>').attr('src', movie.image);
-	$('.display_movie_title').append(movie.title);
+	var randomIndex = Math.floor(Math.random() * movieList.length);
+	var imgTag = $('<img>').attr('src', movieList[randomIndex].image).css('height', '10em');
+	// var movieButton = $('<button>').text('Play');
+	var appendMovieLink = $('<a>').attr('href', movieList[randomIndex].link).text('Play').addClass('btn');
+	// movieButton.append(appendMovieLink);
+	$('.display_movie_title').append(movieList[randomIndex].title);
 	$('.display_movie_poster').append(imgTag);
-
+	$('.display_movie_button').append(appendMovieLink);
 }
 
 
