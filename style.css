@@ -29,7 +29,7 @@ html,body{
 
 .cocktailDisplay{
 	background-color: lightgreen;
-	/*display: none;*/
+	display: none;
 }
 .cocktailBanner{
 	height: 12%;
@@ -62,7 +62,7 @@ html,body{
 
 .movieDisplay{
 	/*background-color: lightblue;*/
-	display: none;
+	/*display: none;*/
 }
 .qualityMovie{
 	height: 50%;
@@ -90,10 +90,16 @@ html,body{
 	font-size: 1.9rem;
 	border: 1px solid;
 }
-.netflixMoviePoster{
-	/*max-height: 100%;*/
-	margin: auto;
+
+
+.movieDbInput{
+	height: 80%;
 }
+.movieDbInput > div{
+	height: 50%;
+	border: 1px solid red;
+}
+
 /*movieDisplay end*/
 
 .yelpOpen, .cocktailOpen, .movieOpen{
@@ -120,3 +126,12 @@ html,body{
 	display: inline-block;
 	float: right;
 }*/
+
+.ingredientsDiv {
+	display: inline-block;
+}
+
+.measuresDiv {
+	display: inline-block;
+	position: absolute;
+}
