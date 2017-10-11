@@ -138,8 +138,9 @@ html,body{
 
 
 .cocktailDisplay{
-	background-color: lightgreen;
+	background-image: url('http://ak7.picdn.net/shutterstock/videos/14543467/thumb/1.jpg');
 	display: none;
+	background-size: cover;
 }
 .cocktailBanner{
 	height: 12%;
@@ -226,6 +227,11 @@ html,body{
 }
 #netflixPlayButton, #netflixSpinButton{
 	font-size: 3vh;
+}
+
+#netflixSpinButton:hover{
+	font-size: 3vh;
+	transform: rotateY(360deg);
 }
 
 .posterArea, .movieContentArea{
