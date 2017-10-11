@@ -25,14 +25,35 @@ html,body{
 	display:none;
 }
 /*yelpDisplay end*/
+
+
 .cocktailDisplay{
 	background-color: lightgreen;
-	display: none;
+	/*display: none;*/
+}
+.cocktailBanner{
+	height: 5%;
+}
+.cocktailRow{
+	/*height: 95%;*/
+}
+.cocktailImgAndIngredient{
+	/*height: 80%;*/
+	/*border: 1px solid;*/
+}
+.cocktailImgWrap{
+	height: 40%;
+}
+.cocktailNameIngButton{
+	/*height: 100%;*/
+	/*border: 1px solid;*/
 }
 /*cocktailDisplay end*/
+
+
 .movieDisplay{
 	/*background-color: lightblue;*/
-	/*display: none;*/
+	display: none;
 }
 .qualityMovie{
 	height: 30%;
@@ -59,7 +80,7 @@ html,body{
 	border : 1px solid orange;
 }
 
-#randomCocktailImgDisplay {
+/*#randomCocktailImgDisplay {
 	border: 1px solid black;
 	height: 250px;
 	width: 250px;
@@ -77,4 +98,4 @@ html,body{
 #randomCocktailMeasuresDisplay {
 	display: inline-block;
 	float: right;
-}
+}*/
