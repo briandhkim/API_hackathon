@@ -21,6 +21,7 @@ function Model(){
 			//the two above dates may change based on user input
 	this.movieDB_lowestRating = 0;		//default lowest rating is 0
 	this.movieDB_highestRatign = 10;	//default highets rating is 10
+
 	/*** end of search parameter for movieDB ***/
 	/**** data to fetch from movieDB ****/
 	this.movieDB_title = '';	// 	key: original_title
