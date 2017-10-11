@@ -2,30 +2,61 @@ html,body{
 	overflow-x:hidden;
 }
 
-.navbar{
-	margin-bottom: 0;
-}
-.hamburger{
-	display: none !important;
-}
-/* !!!!!!! check menu display function in js !!!!!!!!*/
-@media screen and (max-width: 767px){
-	.hamburger{
-		display: inline-block !important;
-	}
-	.navbar-nav{
-		text-align: center;
-	}
-}
-
-/*end of nav content css*/
 .main-body{
-	height: 94.7vh;
+	height: 100vh;
 	/*background-color: lightblue;*/
 }
-.main-body>div{
+
+.mainDisplay, .selectDisplay{
 	height: 100%;
 	border: 1px solid;
+}
+
+.yelpDisplay, .cocktailDisplay, .movieDisplay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	/*default display - block*/
+}
+.yelpDisplay{
+	background-color: lightyellow;
+	display:none;
+}
+/*yelpDisplay end*/
+.cocktailDisplay{
+	background-color: lightgreen;
+	display: none;
+}
+/*cocktailDisplay end*/
+.movieDisplay{
+	/*background-color: lightblue;*/
+	/*display: none;*/
+}
+.qualityMovie{
+	height: 30%;
+	/*width: 100%;*/
+	/*border: 1px solid;*/
+}
+.movieDB{
+	height: 70%;
+	border: 1px solid;
+}
+.posterArea, .movieContentArea{
+	height: 100%;
+	border: 1px solid orange;
+}
+.movieDbTitle{
+	height: 20%;
+	font-size: 1.9rem;
+	border: 1px solid;
+}
+/*movieDisplay end*/
+
+.yelpOpen, .cocktailOpen, .movieOpen{
+	height: 33.33%;
+	border : 1px solid orange;
 }
 
 #randomCocktailImgDisplay {

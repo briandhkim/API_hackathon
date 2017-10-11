@@ -1,4 +1,6 @@
-function getRandMovieByRating(){
+
+var movie = {}
+function grabMoviesFromDataBase(){
 	var promise = {
 		then: function(resolve, reject){
 			this.resolve = resolve;
@@ -12,13 +14,12 @@ function getRandMovieByRating(){
 		success: function(serverData){
 			var shadowDom = new DOMParser()
                 .parseFromString(serverData, "text/html");
-            var movieElements = $(shadowDom).find('.iw-title');
-            var movieList = [];
-            movieElements.each(function(){
-            	var movie = {}
-            	movie.title = $(this).find('.title-link').text();
-            	movieList.push(movie);
-            });
+            var movieElements = $(shadowDom).find('.title-detail-top');
+            	movie.title = $(this).find('.title').text();
+            	movie.image = $(this).find('.iw-boxart').attr('src');
+            	// movie.genre = $(this).find('.genres').text();
+            	// movieList.push(movie);
+          
             console.log(shadowDom);
 		},
 		error: function(err){
@@ -27,6 +28,25 @@ function getRandMovieByRating(){
 	});
 	return promise;
 }
+
+function random(){
+
+	var imgTag = $('<img>').attr('src', movie.image);
+	$('.display_movie_title').append(movie.title);
+	$('.display_movie_poster').append(imgTag);
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 function rouletteSuccess(dat){
 	console.log(dat);
