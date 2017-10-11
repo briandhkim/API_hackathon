@@ -29,7 +29,7 @@ html,body{
 
 .cocktailDisplay{
 	background-color: lightgreen;
-	/*display: none;*/
+	display: none;
 }
 .cocktailBanner{
 	height: 12%;
@@ -62,7 +62,7 @@ html,body{
 
 .movieDisplay{
 	/*background-color: lightblue;*/
-	display: none;
+	/*display: none;*/
 }
 .qualityMovie{
 	height: 50%;
