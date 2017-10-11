@@ -25,6 +25,20 @@ function getYelpData(){
   return promise;
 }
 
+/***
+  yelpData returns:
+  object with keys - businesses, region
+  yelpData.businesses -- array len(20)
+  each array index contains an object with restaurant data
+  yelpData.businesses[i].name           -- restaurant name; string
+  yelpData.businesses[i].image_url      -- restaurant image; string
+  yelpData.businesses[i].display_phone  -- restaurant phone number; string
+  yelpData.businesses[i].url            -- link to yelp; string
+  yelpData.businesses[i].rating         -- rating; int
+  yelpData.businesses[i].price          -- $$; string
+  
+***/
+
 function yelpSuccess(dat){
   console.log(dat);
 }

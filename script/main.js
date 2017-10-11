@@ -33,7 +33,7 @@ $(document).ready(function(){
     movieDbButtonClick();   //do one random gen on load
     // end of functions for movieDB api
 
-    // getYelpData().then(yelpSuccess,yelpFail);
+    getYelpData().then(yelpSuccess,yelpFail);
 
     // get netflix data
     grabMoviesFromDataBase();
