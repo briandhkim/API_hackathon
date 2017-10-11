@@ -161,8 +161,10 @@ html,body{
 
 
 .movieDisplay{
-	background-color: rgba(219,0,0,0.6);
 	display: none;
+	background: red;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, red, #0099F7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, red, #0099F7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .qualityMovie, .movieDB{
 	height: 47%;
@@ -182,6 +184,12 @@ html,body{
 }
 .netflixMovieTitleContent, .netflixMoviePoster{
 	height: 100%;
+	color: white;
+	text-shadow: 
+	1px 1px 0 #000,
+	-1px -1px 0 #000,
+	2px 2px 0 #000,
+	3px 3px 0 #000;
 	/*border: 1px solid green;*/
 }
 .netflixMovieTitle, .netflixMovieButton{
@@ -331,3 +339,14 @@ html,body{
 	display: inline-block;
 	position: absolute;
 }
+
+
+.netflixSummary {
+	font-size: 3vh;
+	text-align: center;
+}
+
+
+
+
+

@@ -34,6 +34,10 @@ $(document).ready(function(){
     // end of functions for movieDB api
 
     // getYelpData().then(yelpSuccess,yelpFail);
+
+    // get netflix data
+    grabMoviesFromDataBase();
+    $('#netflixSpinButton').on('click', grabMoviesFromDataBase)
 });
 
 
