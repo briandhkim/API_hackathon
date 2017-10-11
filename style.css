@@ -93,11 +93,11 @@ html,body{
 }
 .movieDB{
 	height: 50%;
-	border: 1px solid;
+	/*border: 1px solid;*/
 }
 .posterArea, .movieContentArea{
 	height: 100%;
-	border: 1px solid orange;
+	/*border: 1px solid orange;*/
 }
 .movieDbTitle{
 	height: 20%;
@@ -125,6 +125,8 @@ html,body{
 	1px 1px 0 #fff;
 }
 .movieDbInput h5{
+	margin-top:30px;
+	margin-bottom: 0;
 	height: 30%;
 	font-size: 3vh;
 	color: rgb(240,240,240);
@@ -137,7 +139,7 @@ html,body{
 }
 .movieDbInput > div{
 	height: 50%;
-	border: 1px solid /*r*/ed;
+	/*border: 1px solid red;*/
 }
 #movieDBbutton{
 	font-size: 2vh;
@@ -156,7 +158,7 @@ html,body{
 	height: 27.5%;
 	margin-top: 3px;
 	border-radius: 20px;
-	border : 1px solid orange;
+	border : 1px solid or/*a*/nge;
 }
 .yelpOpen{
 	font-family: yelpFont;
