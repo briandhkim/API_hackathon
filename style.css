@@ -38,6 +38,15 @@ html,body{
 	background-color: lightyellow;
 	display:none;
 }
+.yelpBanner, .yelpContent{
+	border: 1px solid;
+}
+.yelpBanner{
+	height: 12%;
+}
+.yelpContent{
+	height: 88%;
+}
 /*yelpDisplay end*/
 
 
@@ -94,13 +103,34 @@ html,body{
 	font-family: netflixFont;
 	font-size: 3rem;
 }
-.netflixMovieTitleButton, .netflixMoviePoster{
+.netflixMovieTitleContent, .netflixMoviePoster{
 	height: 100%;
 	/*border: 1px solid green;*/
 }
 .netflixMovieTitle, .netflixMovieButton{
-	height: 50%;
+	/*height: 50%;*/
 	border: 1px solid green;
+}
+.netflixMovieTitle{
+	height: 75%;
+}
+.netflixTitleArea{
+	height: 40%;
+	border: 1px solid orange;
+}
+.netflixTitleArea>h1{
+	margin-top: 5%;
+	font-size: 4.5vh;
+}
+.netflixSummary{
+	height: 60%;
+	border: 1px solid orange;
+}
+.netflixMovieButton{
+	height: 25%;
+}
+#netflixPlayButton, #netflixSpinButton{
+	font-size: 3vh;
 }
 
 .posterArea, .movieContentArea{
@@ -168,7 +198,8 @@ html,body{
 	height: 27.5%;
 	margin-top: 3px;
 	border-radius: 20px;
-	border : 1px solid or/*a*/nge;
+	border : 5px solid black;
+	box-sizing: border-box;
 }
 .yelpOpen{
 	font-family: yelpFont;
