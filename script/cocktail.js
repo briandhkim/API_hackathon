@@ -35,31 +35,6 @@ function dataPullFail(err){
 
 // getRandomCocktailData().then(dataPullSuccess,dataPullFail);
 
-/*****/
-// function getDrinkByLiquor(liquor){
-// 	var promise = {
-// 		then: function(resolve, reject){
-// 			this.resolve = resolve;
-// 			this.reject = reject;
-// 		}
-// 	};
-// 	$.ajax({
-// 		url: 'http://www.thecocktaildb.com/api/json/v1/1/filter.php',
-// 		dataType: 'json',
-// 		method: 'get',
-// 		data: {
-// 			'i': liquor
-// 		},
-// 		success: function(drink_data){
-// 			promise.resolve(drink_data);
-// 		},
-// 		error: function(err){
-// 			promise.resolve(err);
-// 		}
-// 	});
-// 	return promise;
-// }
-/*****/
 function getCocktailByIngredient(){
     var promise = {
         then: function(resolve, reject){
@@ -88,7 +63,7 @@ function dataPullFail(err){
     console.log(err);
 }
 
-// getSpecificCocktailData().then(dataPullSuccess,dataPullFail);
+// getCocktailByIngredient().then(dataPullSuccess,dataPullFail);
 
 function getSpecificCocktailData(){
     var promise = {
@@ -98,12 +73,13 @@ function getSpecificCocktailData(){
         }
     };
     $.ajax({
-        url: 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + cocktail,
+        url: 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + cocktail,
         dataType : 'json',
         method: 'get',
         success: function(drink_data){
             promise.resolve(drink_data);
             specificDrinkData = drink_data;
+            sendSpecificCocktailData();
         },
         error: function(err){
             promise.resolve(err);
@@ -117,3 +93,15 @@ function dataPullSuccess(drink_data){
 function dataPullFail(err){
     console.log(err);
 }
+
+function sendSpecificCocktailData(){
+    var specificCocktailName = specificDrinkData.drinks[0].strDrink;
+    $('.drinkName').text(specificCocktailName);
+    var specificCocktailImageSource = specificDrinkData.drinks[0].strDrinkThumb;
+    $('.randomCocktailImg').attr('src', specificCocktailImageSource);
+    specificCocktailIngredients();
+    specificCocktailMeasures();
+    specificCocktailDirections();
+}
+
+// getSpecificCocktailData().then(dataPullSuccess,dataPullFail);
