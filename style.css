@@ -92,6 +92,7 @@ html,body{
 }
 .netflixMoviePoster{
 	/*max-height: 100%;*/
+	margin: auto;
 }
 /*movieDisplay end*/
 
