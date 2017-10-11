@@ -19,7 +19,6 @@ html,body{
 
 .main-body{
 	height: 100vh;
-	/*background-color: lightblue;*/
 }
 
 .mainDisplay, .selectDisplay{
@@ -95,11 +94,9 @@ html,body{
 }
 .yelpResultDisplay{
 	height: 65%;
-	/*border: 1px solid;*/
 }
 .yelpResult1, .yelpResult2, .yelpResult3{
 	height: 90%;
-	border: 1px solid;
 	margin-top: 2%;
 	text-align: center;
 }
