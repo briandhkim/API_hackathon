@@ -15,7 +15,7 @@ function Model(){
 	this.cocktail_liquorList = []; 		//to be used for generating dom list of liquor list
 	//end of cocktail api data
 
-	/***** user search parameter for movieDB *****/
+	/***** user search parameter for movieDB *****/a
 	this.movieDB_releaseDateMin = "2001-01-01"; 	//default set to beginning of 2001
 	this.movieDB_releaseDateMax = "2017-09-11";		//default set date
 			//the two above dates may change based on user input
