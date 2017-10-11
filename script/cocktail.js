@@ -1,8 +1,9 @@
-// http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin
-
-var liquor = "Vodka";
+var liquor = null;
+var cocktail = null;
 var randomDrinkData = null;
-/*****/
+var drinkByIngredient = null;
+var specificDrinkData = null;
+
 function getRandomCocktailData(){
 	var promise = {
 		then: function(resolve, reject){
@@ -26,15 +27,14 @@ function getRandomCocktailData(){
 }
 function dataPullSuccess(drink_data){
 	console.log(drink_data);
+
 }
 function dataPullFail(err){
 	console.log(err);
 }
 
-getRandomCocktailData().then(dataPullSuccess,dataPullFail);
-/*****/
+// getRandomCocktailData().then(dataPullSuccess,dataPullFail);
 
-// http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin
 /*****/
 // function getDrinkByLiquor(liquor){
 // 	var promise = {
@@ -59,3 +59,61 @@ getRandomCocktailData().then(dataPullSuccess,dataPullFail);
 // 	});
 // 	return promise;
 // }
+/*****/
+function getCocktailByIngredient(){
+    var promise = {
+        then: function(resolve, reject){
+            this.resolve = resolve;
+            this.reject = reject;
+        }
+    };
+    $.ajax({
+        url: 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + liquor,
+        dataType : 'json',
+        method: 'get',
+        success: function(drink_data){
+            promise.resolve(drink_data);
+            drinkByIngredient = drink_data;
+        },
+        error: function(err){
+            promise.resolve(err);
+        }
+    });
+    return promise;
+}
+function dataPullSuccess(drink_data){
+    console.log(drink_data);
+}
+function dataPullFail(err){
+    console.log(err);
+}
+
+// getSpecificCocktailData().then(dataPullSuccess,dataPullFail);
+
+function getSpecificCocktailData(){
+    var promise = {
+        then: function(resolve, reject){
+            this.resolve = resolve;
+            this.reject = reject;
+        }
+    };
+    $.ajax({
+        url: 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + cocktail,
+        dataType : 'json',
+        method: 'get',
+        success: function(drink_data){
+            promise.resolve(drink_data);
+            specificDrinkData = drink_data;
+        },
+        error: function(err){
+            promise.resolve(err);
+        }
+    });
+    return promise;
+}
+function dataPullSuccess(drink_data){
+    console.log(drink_data);
+}
+function dataPullFail(err){
+    console.log(err);
+}

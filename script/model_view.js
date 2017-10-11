@@ -41,14 +41,13 @@ function View(){
 		assign appropriate input from DOM to values in Model
 			this will be in the user search parameter area for the values
 	*/ 
-	this.randomMovieButton(){
-
-	}
+	// this.randomMovieButton(){
+	// }
 
 	/*
 		get a random movie from the netflix data on load and update dom with the info
 	*/
-	this.getRandomMovieFromStart(){
-
-	}
+	// this.getRandomMovieFromStart(){
+    //
+	// }
 }
