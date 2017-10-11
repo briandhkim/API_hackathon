@@ -107,13 +107,26 @@ html,body{
 	height: 235px;
 	padding: 0;
 }
+.yelpImgWrapper{
+	padding: 2%;
+}
 .yelpResultPanel img{
 	/*margin: 0;*/
 	height: auto;
 }
+@media screen and (min-width: 1350px){
+	.yelpImgWrapper{
+		height: 100%;
+		width: auto;
+	}
+}
 @media screen and (min-width: 1400px){
 	.yelpResultPanel .panel-body{
 		height: 270px;
+	}
+	.yelpImgWrapper{
+		height: 100%;
+		padding: 0;
 	}
 	.yelpResultPanel img{
 		width: 100%;
