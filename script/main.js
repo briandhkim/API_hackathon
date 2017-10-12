@@ -20,8 +20,8 @@ $(document).ready(function(){
     yelpSearchButton();
 
     // get netflix data
-    grabMoviesFromDataBase();
-    $('#netflixSpinButton').on('click', grabMoviesFromDataBase);
+    netflixRouletteButton();
+    $('#netflixSpinButton').on('click', netflixRouletteButton);
 
     //functions for cocktailAPI
     getRandomCocktailData().then(randCocktailSuccess,randCocktailFail);
