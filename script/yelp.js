@@ -38,8 +38,19 @@ function getYelpData(){
   yelpData.businesses[i].price          -- $$; string                 #yelpResult[i]-price
 ***/
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function yelpSuccess(dat){
   // console.log(dat);
+  $('#yelpSearchButton .fa-spinner').remove();
+  $('.fa-5x').remove();
+  $('.yelpImgWrapper').removeClass('hm-stylish-strong').addClass('overlay');
+  $('#yelpSearchButton').prop('disabled', false);
   var threeYelp = randomThreeFood(dat.businesses);
   // console.log(threeYelp);
   for(var i=0; i<3; i++){
@@ -55,7 +66,17 @@ function yelpFail(er){
   console.log(er);
 }
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function yelpSearchButton(){
+  $('#yelpSearchButton').append(loadIcon).prop('disabled', true);
+  $('.yelpImgWrapper .mask').append(largeLoadIcon);
+  $('.yelpImgWrapper').removeClass('overlay').addClass('hm-stylish-strong');
   var yelpZip = $('#yelpZip').val();
   if(yelpZip!==''){
     zipcode = yelpZip;
@@ -69,6 +90,13 @@ function yelpSearchButton(){
   parameter - array: yelpData.businesses
   returns array of 3 objects containing restaurant info
 **/
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function randomThreeFood(yelpArr){  
   var returnArr =[];
   var randIdx = 20;

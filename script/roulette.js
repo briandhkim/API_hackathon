@@ -37,6 +37,13 @@ function grabMoviesFromDataBase(){ // Gets ajax call on "document.ready" and on 
 	return promise;
 }
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function netflixRouletteButton(){
 	grabMoviesFromDataBase();
 	//add lines here for making button spin
@@ -45,6 +52,13 @@ function netflixRouletteButton(){
 
 }
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function renderMovieInfoToDom(){ // Gets movie info and places them into DOM elements 
 	var setDecimalForMovieRating = parseFloat(movie.rating);
 	$('.netflixTitleSpan').text(movie.title);

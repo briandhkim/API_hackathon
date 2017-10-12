@@ -1,5 +1,5 @@
 var lowestRating = 0;
-var highestRating = 9;
+var highestRating = 4;
 var releaseMin = "2001-01-05";
 var releaseMax = "2017-01-02";
 var genres = "";
@@ -27,6 +27,13 @@ function getGenreList(){
 	});
 	return promise;
 }
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function genrePullSuccess(genres){
 	// console.log(genres.genres);
 	// genres.genres returns index of objects
@@ -90,6 +97,13 @@ function getMovieDB(){
 	});
 	return promise;
 }
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function movieDataSuccess(dataM){
 	/*
 		dataM.results  -->array of len20 contains movie data
@@ -108,12 +122,22 @@ function movieDataSuccess(dataM){
 	$('.movTitle').text(movie.title);
 	$('.movieDBrating').text(movie.vote_average);
 	$('.movieDbTitle').css('background-image', 'url("https://image.tmdb.org/t/p/w500'+movie.backdrop_path+'")');
+	$('#movieDBbutton .fa-spinner').remove();
+	$('#movieDBbutton').prop('disabled', false)
 }
 function movieDataFail(err){
 	console.log(err);
 }
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function movieDbButtonClick(){
+	$('#movieDBbutton').append(loadIcon).prop('disabled',true);
 	var minRating = $('#minMovieRange').val();	//returns null if nothing selected
 	if(minRating!==null){
 		lowestRating= parseInt(minRating);

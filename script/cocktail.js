@@ -33,6 +33,13 @@ function getRandomCocktailData(){
             drink_data.drinks[0].strIngredient1 = 'first ingredient'    ;will need to be looped to check all (1-15) -returns empty string for blank
             drink_data.drinks[0].strMeasure1 = 'first ing measure'      ;will have same idx as strIng
 **/
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function randCocktailSuccess(drink_data){
     // console.log(drink_data.drinks[0]);
     // console.log(drink_data.drinks[0].strIngredient12);
@@ -75,6 +82,13 @@ function getCocktailByIngredient(){
     this function randomly selects from given array of drinks based on liquor selection
     calls ajax call function for getting a drink based on cocktail name
 **/
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function cocktailIngSuccess(drink_data){
     // console.log(drink_data);
     // console.log(drink_data.drinks.length); 
@@ -116,6 +130,13 @@ function getSpecificCocktailData(){
 /**
     same data returned as getRandomCocktailData
 **/ 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function cocktailSpecificSuccess(drink_data){
     console.log(drink_data);
      var ct_data = drink_data.drinks[0];
@@ -127,7 +148,12 @@ function cocktailSpecificFail(err){
 
 
 
-
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function cocktailButton(){
     var userInput = $('#drinkSelect').val();
     // console.log(userInput)
@@ -146,12 +172,18 @@ function cocktailButton(){
     param - drink_data.drinks[0]  = object with drink data reference the comment up top
     return - nothing
 **/
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function drinkDOMupdate(ct_data){   
  // saving ingredient and measures data
     var cocktailIngredients = [];
     var cocktailIngMeasures = [];
     for (var i=1; i<16; i++){
-        if(ct_data['strIngredient'+i]!==''){
+        if(ct_data['strIngredient'+i]!=='' && ct_data['strIngredient'+i]!==undefined &&ct_data['strIngredient'+i]!==null){
             cocktailIngredients[i-1] = ct_data['strIngredient'+i];
             cocktailIngMeasures[i-1] = ct_data['strMeasure'+i];
         }

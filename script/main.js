@@ -6,8 +6,6 @@ $(document).ready(function(){
     $('.cocktailOpen').click(cocktailOpenClick);
     $('.movieOpen').click(movieOpenClick);
 
-    // $('#drinkButton').click(handleRandomCocktailDataClick);
-    // $('#confirmButton').click(selectFunction);
 
     // functions for movieDB api
     $('#movieDBbutton').click(movieDbButtonClick);
@@ -29,6 +27,13 @@ $(document).ready(function(){
     //end of functions for cocktailAPI
 });
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function yelpOpenClick(){
     $('.selectDisplay').addClass('yelpGradent');
     $('.selectDisplay').removeClass('netflixGradent');
@@ -36,6 +41,12 @@ function yelpOpenClick(){
 	$('.yelpDisplay').css('display','block');
 	$('.cocktailDisplay, .movieDisplay').css('display','none');
 }
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function cocktailOpenClick(){
     $('.selectDisplay').addClass('drinkGradent');
     $('.selectDisplay').removeClass('netflixGradent');
@@ -43,6 +54,12 @@ function cocktailOpenClick(){
 	$('.cocktailDisplay').css('display', 'block');
 	$('.yelpDisplay, .movieDisplay').css('display','none');
 }
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function movieOpenClick(){
     $('.selectDisplay').addClass('netflixGradent');
     $('.selectDisplay').removeClass('yelpGradent');
@@ -51,3 +68,17 @@ function movieOpenClick(){
 	$('.yelpDisplay, .cocktailDisplay').css('display','none');
 }
 
+var loadIcon = $('<i>',{
+    class: 'fa fa-spinner fa-spin loadicon'
+    // id: 'loadicon'
+});
+var largeLoadIcon = $('<i>',{
+    class: 'fa fa-spinner fa-spin loadicon fa-5x'
+});
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/

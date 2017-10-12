@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Prociono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,11 +30,11 @@
 			<div class="col-sm-10 mainDisplay">
 				<div class="yelpDisplay">
 					<div class="col-sm-12 yelpBanner">
-						<div class="">
+						<!-- <div class=""> -->
 							<h1 class="h1-responsive yelpH1">
 								order some food for the lonely night ahead...
 							</h1>
-						</div>
+						<!-- </div> -->
 					</div>	<!--end of yelpBanner div-->
 					<div class="col-sm-12 yelpContent">
 						<div class="yelpSearchArea text-center">
@@ -53,15 +54,15 @@
 							<div class="col-xs-12 col-sm-4 yelpResult1">
 								<div class="panel panel-default yelpResultPanel">
 									<div class="panel-heading">
-										<h3 class="h3-responsive panel-title">
+										<h5 class="h5-responsive panel-title">
 											<span id="yelpResult1Name">Restaurant name</span> 
 											<small> - <span id="yelpResult1-price">$$</span></small>
-										</h3>
+										</h5>
 									</div>
 									<div class="panel-body view">
-										<div class="view overlay hm-zoom yelpImgWrapper">
-											<img src="https://s3-media1.fl.yelpcdn.com/bphoto/-ib7jrGprUWK1BQmThAdsA/o.jpg" class="img-fluid" alt="restaurant image">
-											<div class="mask"></div> 
+										<div class="view overlay hm-zoom yelpImgWrapper cyan lighten-2">
+											<img src="https://s3-media1.fl.yelpcdn.com/bphoto/-ib7jrGprUWK1BQmThAdsA/o.jpg" class="img-fluid col-xs-12" alt="restaurant image">
+											<div class="mask flex-center blue-grey-text"></div> 
 										</div>
 									</div>
 									<div class="panel-footer text-center">
@@ -70,7 +71,7 @@
 											<li>phone: <span id="restaurant1_phone"></span></li>
 											<li>
 												<a id="restaurant1_link" href="" target="_blank">
-													<button >yelp</button>
+													<button class="btn btn-lg btn-deep-orange">yelp</button>
 												</a>
 											</li>
 										</ul>
@@ -80,15 +81,15 @@
 							<div class="col-xs-12 col-sm-4 yelpResult2">	
 								<div class="panel panel-default yelpResultPanel">
 									<div class="panel-heading">
-										<h3 class="h3-responsive panel-title">
+										<h5 class="h5-responsive panel-title">
 											<span id="yelpResult2Name">Restaurant name</span> 
 											<small> - <span id="yelpResult2-price">$$</span></small>
-										</h3>
+										</h5>
 									</div>
 									<div class="panel-body view">
-										<div class="view overlay hm-zoom yelpImgWrapper">
-											<img src="https://s3-media1.fl.yelpcdn.com/bphoto/-ib7jrGprUWK1BQmThAdsA/o.jpg" class="img-fluid" alt="restaurant image">
-											<div class="mask"></div> 
+										<div class="view overlay hm-zoom yelpImgWrapper mdb-color">
+											<img src="https://s3-media1.fl.yelpcdn.com/bphoto/-ib7jrGprUWK1BQmThAdsA/o.jpg" class="img-fluid col-xs-12" alt="restaurant image">
+											<div class="mask flex-center amber-text"></div> 
 										</div>
 									</div>
 									<div class="panel-footer text-center">
@@ -97,7 +98,7 @@
 											<li>phone: <span id="restaurant2_phone"></span></li>
 											<li>
 												<a id="restaurant2_link" href="" target="_blank">
-													<button >yelp</button>
+													<button class="btn btn-lg btn-dark-green">yelp</button>
 												</a>
 											</li>
 										</ul>
@@ -107,15 +108,15 @@
 							<div class="col-xs-12 col-sm-4 yelpResult3">
 								<div class="panel panel-default yelpResultPanel">
 									<div class="panel-heading">
-										<h3 class="h3-responsive panel-title">
+										<h5 class="h5-responsive panel-title">
 											<span id="yelpResult3Name">Restaurant name</span> 
-											<small> - <span class="yelpResult3-price">$$</span></small>
-										</h3>
+											<small> - <span id="yelpResult3-price">$$</span></small>
+										</h5>
 									</div>
 									<div class="panel-body view">
-										<div class="view overlay hm-zoom yelpImgWrapper">
-											<img src="https://s3-media1.fl.yelpcdn.com/bphoto/-ib7jrGprUWK1BQmThAdsA/o.jpg" class="img-fluid" alt="restaurant image">
-											<div class="mask"></div> 
+										<div class="view overlay hm-zoom yelpImgWrapper green accent-3">
+											<img src="https://s3-media1.fl.yelpcdn.com/bphoto/-ib7jrGprUWK1BQmThAdsA/o.jpg" class="img-fluid col-xs-12" alt="restaurant image">
+											<div class="mask flex-center white-text"></div> 
 										</div>
 									</div>
 									<div class="panel-footer text-center">
@@ -124,7 +125,7 @@
 											<li>phone: <span id="restaurant3_phone"></span></li>
 											<li>
 												<a id="restaurant3_link" href="" target="_blank">
-													<button >yelp</button>
+													<button class="btn btn-lg btn-unique">yelp</button>
 												</a>
 											</li>
 										</ul>
@@ -134,11 +135,11 @@
 						</div>
 					</div>	<!--end of yelpContent div-->
 				</div> 	<!--end of yelpDisplay div-->
-				<div class="cocktailDisplay">	
-					<div class="col-xs-12 cocktailBanner">
-						<div class="page-header">
-							<h1 class="h1-responsive ctBanner">
-								Have a drink <small>for your lonely night</small>
+				<div class="cocktailDisplay view">	
+					<div class="col-xs-12 cocktailBanner hm-white-slight">
+						<div class="page-header text-right">
+							<h1 class="h1-responsive ctBanner white-text">
+								Have a drink <small class="ctBannerSmall cyan-text"> drown out your sorrows</small>
 							</h1>
 						</div>
 					</div>
@@ -161,11 +162,9 @@
 								<div class="col-xs-12 cocktailIngredientRow">
 									<h2 class="h2-responsive"><u>Ingredients:</u></h2>
 									<div id="ingredientsContainer">
-										<!-- <div class="ingredientsDiv"></div>
-										<div class="measuresDiv"></div> -->
-										<ul class="ingredientsList">
+											<ul class="ingredientsList">
 											
-										</ul>
+											</ul>
 									</div>
 								</div>
 								<div class="col-xs-12 cocktailInstructionRow">
@@ -174,7 +173,7 @@
 								</div>
 							</div>
 							<div class="row dropDownAndButton text-center">
-								<div class="col-sm-6 liquorDrop text-right">
+								<div class="col-sm-6 liquorDrop text-center">
 										<select id="drinkSelect">
 											<option value="Random">Random</option>
 											<option value="Vodka">Vodka</option>
@@ -223,7 +222,7 @@
 							</div>
 						</div>
 						<div class="col-sm-4 netflixMoviePoster view">
-							<div class="view overlay hm-zoom">
+							<div class="view overlay hm-zoom col-sm-9 col-sm-offset-1">
 								<img src="https://i.pinimg.com/736x/fd/5e/66/fd5e662dce1a3a8cd192a5952fa64f02--classic-poster-classic-movies-posters.jpg" class="netflixMoviePoster img-fluid" alt="netflix poster">
 								<div class="mask"></div>
 							</div>
@@ -236,8 +235,8 @@
 					</div>
 					<div class="col-xs-12 movieDB">	<!--movieDB content and roulette-->
 						<div class="col-sm-4 posterArea view">
-							<div class="view overlay hm-zoom">
-								<img src="https://image.tmdb.org/t/p/w640/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" class="movieDbPoster img-fluid" alt="movie poster">
+							<div class="view overlay hm-zoom col-sm-9 col-sm-offset-3">
+								<img src="https://image.tmdb.org/t/p/w640/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" class="movieDbPoster img-fluid col-xs-12" alt="movie poster">
 								<div class="mask"></div>
 							</div>
 						</div>	<!--end of posterArea div-->
@@ -306,7 +305,7 @@
 					</div>
 				</div>
 				<div class="yelpOpen view">
-					<div class="view overlay hm-zoom hm-white-light">
+					<div class="view overlay hm-zoom hm-white-light col-xs-12">
 						<img src="assets/foodStock.png" class="img-fluid">
 						<div class="mask flex-center">
 							<p>food</p>
@@ -315,7 +314,7 @@
 				</div>
 				<div class="cocktailOpen view">
 					<div class="view overlay hm-zoom hm-white-light">
-						<img src="assets/martini.png" class="img-fluid">
+						<img src="assets/martini.png" class="img-fluid col-xs-12">
 						<div class="mask flex-center">
 							<p>DRINKS</p>
 						</div>
@@ -323,7 +322,7 @@
 				</div>
 				<div class="movieOpen view">
 					<div class="view overlay hm-zoom hm-white-light">
-						<img src="assets/filmStock.png" class="img-fluid">
+						<img src="assets/filmStock.png" class="img-fluid col-xs-12">
 						<div class="mask flex-center">
 							<p>MOVIES</p>
 						</div>
