@@ -38,6 +38,13 @@ function getYelpData(){
   yelpData.businesses[i].price          -- $$; string                 #yelpResult[i]-price
 ***/
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function yelpSuccess(dat){
   // console.log(dat);
   $('#yelpSearchButton .fa-spinner').remove();
@@ -59,6 +66,13 @@ function yelpFail(er){
   console.log(er);
 }
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function yelpSearchButton(){
   $('#yelpSearchButton').append(loadIcon).prop('disabled', true);
   $('.yelpImgWrapper .mask').append(largeLoadIcon);
@@ -76,6 +90,13 @@ function yelpSearchButton(){
   parameter - array: yelpData.businesses
   returns array of 3 objects containing restaurant info
 **/
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function randomThreeFood(yelpArr){  
   var returnArr =[];
   var randIdx = 20;

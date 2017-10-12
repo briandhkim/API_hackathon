@@ -27,6 +27,13 @@ function getGenreList(){
 	});
 	return promise;
 }
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function genrePullSuccess(genres){
 	// console.log(genres.genres);
 	// genres.genres returns index of objects
@@ -90,6 +97,13 @@ function getMovieDB(){
 	});
 	return promise;
 }
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function movieDataSuccess(dataM){
 	/*
 		dataM.results  -->array of len20 contains movie data
@@ -115,6 +129,13 @@ function movieDataFail(err){
 	console.log(err);
 }
 
+
+/***************************************************************************************************
+* function name 
+* @params {undefined} none
+* @returns: {undefined} none
+* function description
+*/
 function movieDbButtonClick(){
 	$('#movieDBbutton').append(loadIcon).prop('disabled',true);
 	var minRating = $('#minMovieRange').val();	//returns null if nothing selected
