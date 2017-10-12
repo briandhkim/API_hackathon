@@ -25,6 +25,8 @@ function grabMoviesFromDataBase(){ // Gets ajax call on "document.ready" and on 
             	movie.synopsis = $(holdMovieSynopsis).text();
             	//here take out the edit made to button spin
             	$('#netflixSpinButton').removeClass('spinOnLoad');
+            	$('#netflixSpinButton').prop('disabled', false);
+
             });
             renderMovieInfoToDom();	
 		},
@@ -39,6 +41,7 @@ function netflixRouletteButton(){
 	grabMoviesFromDataBase();
 	//add lines here for making button spin
 	$('#netflixSpinButton').addClass('spinOnLoad');
+	$('#netflixSpinButton').prop('disabled', true);
 
 }
 
