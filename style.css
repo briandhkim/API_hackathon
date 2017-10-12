@@ -191,9 +191,13 @@ html,body{
 	height: 50%;
 	/*border: 1px solid red;*/
 }
+.cocktailIngredientRow{
+	overflow: auto;
+}
 .ingredientsList{
 	list-style-type: square;
 	font-size: 2.5vh;
+	
 }
 .ct-Measure{
 	margin-left: 15px;
@@ -218,6 +222,7 @@ html,body{
 .cocktailInstructions{
 	height: 70%;
 	font-size: 2.5vh;
+	overflow: auto;
 	/*border: 1px solid;*/
 }
 .dropDownAndButton{
