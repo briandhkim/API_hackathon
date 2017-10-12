@@ -36,7 +36,7 @@ html,body{
 }
 .yelpDisplay{
 	background-color: lightyellow;
-	display:none;
+	/*display:none;*/
 }
 .yelpBanner{
 	height: 12%;
