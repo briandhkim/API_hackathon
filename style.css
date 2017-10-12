@@ -47,6 +47,10 @@ html,body{
 }
 .yelpContent{
 	height: 88%;
+	background: #403B4A;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 	/*border: 1px solid;*/
 }
 .yelpSearchArea{
@@ -138,9 +142,11 @@ html,body{
 
 
 .cocktailDisplay{
-	background-image: url('http://ak7.picdn.net/shutterstock/videos/14543467/thumb/1.jpg');
 	display: none;
-	background-size: cover;
+	background: #5f2c82;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .cocktailBanner{
 	height: 12%;
@@ -230,8 +236,8 @@ html,body{
 }
 
 #netflixSpinButton:hover{
-	font-size: 3vh;
-	transform: rotateY(360deg);
+	
+	transform: rotateZ(360deg);
 }
 
 .posterArea, .movieContentArea{
@@ -362,7 +368,34 @@ html,body{
 	text-align: center;
 }
 
+.yelpBanner {
+	font-family: yelpFont;
+	background: #CD1F20;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #CD1F20, maroon);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #CD1F20, maroon); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-shadow: 
+	1px 1px 0 #FFF,
+	-1px -1px 0 #FFF,
+	2px 2px 0 #FFF,
+	3px 3px 0 #FFF;
+}
 
+.yelpGradent{
+	background: #403B4A;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.netflixGradent{
+	background: red;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, red, #0099F7 );  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, red, #0099F7 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.drinkGradent{
+	background: #5f2c82;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 

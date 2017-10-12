@@ -44,14 +44,23 @@ $(document).ready(function(){
 
 
 function yelpOpenClick(){
+    $('.selectDisplay').addClass('yelpGradent');
+    $('.selectDisplay').removeClass('netflixGradent');
+    $('.selectDisplay').removeClass('drinkGradent');
 	$('.yelpDisplay').css('display','block');
 	$('.cocktailDisplay, .movieDisplay').css('display','none');
 }
 function cocktailOpenClick(){
+    $('.selectDisplay').addClass('drinkGradent');
+    $('.selectDisplay').removeClass('netflixGradent');
+    $('.selectDisplay').removeClass('yelpGradent');
 	$('.cocktailDisplay').css('display', 'block');
 	$('.yelpDisplay, .movieDisplay').css('display','none');
 }
 function movieOpenClick(){
+    $('.selectDisplay').addClass('netflixGradent');
+    $('.selectDisplay').removeClass('yelpGradent');
+    $('.selectDisplay').removeClass('drinkGradent');
 	$('.movieDisplay').css('display','block');
 	$('.yelpDisplay, .cocktailDisplay').css('display','none');
 }
