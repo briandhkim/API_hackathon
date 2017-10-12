@@ -29,10 +29,11 @@ $(document).ready(function(){
 
 
 /***************************************************************************************************
-* function name 
+* function name : yelpOpenClick
 * @params {undefined} none
 * @returns: {undefined} none
-* function description
+* function description : opens yelp display area and closes other display areas
+        changes background color to yelp specific
 */
 function yelpOpenClick(){
     $('.selectDisplay').addClass('yelpGradent');
@@ -42,10 +43,11 @@ function yelpOpenClick(){
 	$('.cocktailDisplay, .movieDisplay').css('display','none');
 }
 /***************************************************************************************************
-* function name 
+* function name : cocktailOpenClick
 * @params {undefined} none
 * @returns: {undefined} none
-* function description
+* function description : oepns cocktail display area and closes other display areas
+        toggle class for changing background color to cocktail specific
 */
 function cocktailOpenClick(){
     $('.selectDisplay').addClass('drinkGradent');
@@ -55,10 +57,11 @@ function cocktailOpenClick(){
 	$('.yelpDisplay, .movieDisplay').css('display','none');
 }
 /***************************************************************************************************
-* function name 
+* function name : movieOpenClick    
 * @params {undefined} none
 * @returns: {undefined} none
-* function description
+* function description : open movie display area and closes other display areas
+        toggle class for changing background color to cocktail specific
 */
 function movieOpenClick(){
     $('.selectDisplay').addClass('netflixGradent');

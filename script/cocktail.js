@@ -15,7 +15,6 @@ function getRandomCocktailData(){
 		method: 'get',
 		success: function(drink_data){
 			promise.resolve(drink_data);
-			randomDrinkData = drink_data;
 		},
 		error: function(err){
 			promise.resolve(err);
@@ -65,7 +64,6 @@ function getCocktailByIngredient(){
         method: 'get',
         success: function(drink_data){
             promise.resolve(drink_data);
-            drinkByIngredient = drink_data;
         },
         error: function(err){
             promise.resolve(err);
@@ -118,8 +116,6 @@ function getSpecificCocktailData(){
         method: 'get',
         success: function(drink_data){
             promise.resolve(drink_data);
-            specificDrinkData = drink_data;
-            sendSpecificCocktailData();
         },
         error: function(err){
             promise.resolve(err);
