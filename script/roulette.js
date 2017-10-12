@@ -23,6 +23,7 @@ function grabMoviesFromDataBase(){ // Gets ajax call on "document.ready" and on 
             	movie.rating = $(this).find('.average_rating').text();
             	var holdMovieSynopsis = $(this).find('.synopsis')[0];
             	movie.synopsis = $(holdMovieSynopsis).text();
+            	//here take out the edit made to button spin
             });
             renderMovieInfoToDom();	
 		},
@@ -31,6 +32,11 @@ function grabMoviesFromDataBase(){ // Gets ajax call on "document.ready" and on 
 		}
 	});
 	return promise;
+}
+
+function netflixRouletteButton(){
+	gramMoviesFromDataBase();
+	//add lines here for making button spin
 }
 
 function renderMovieInfoToDom(){ // Gets movie info and places them into DOM elements 
