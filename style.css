@@ -294,7 +294,7 @@ html,body{
 	font-size: 3vh;
 }
 
-#netflixSpinButton:hover{
+.spinOnLoad{
 	transform: rotateZ(360deg);
 }
 
