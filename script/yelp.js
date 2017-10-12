@@ -40,10 +40,11 @@ function getYelpData(){
 
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
+* function name : yelpSuccess
+* @params {dat} yelp data returned. reference comment above for specific details
 * @returns: {undefined} none
-* function description
+* function description : receives yelp data when ajax call for yelp data is completed successfully
+          DOM change to update restaurant data
 */
 function yelpSuccess(dat){
   // console.log(dat);
@@ -68,10 +69,11 @@ function yelpFail(er){
 
 
 /***************************************************************************************************
-* function name 
+* function name : yelpSearchButton
 * @params {undefined} none
 * @returns: {undefined} none
-* function description
+* function description : called when user clicks search button to get new restaurants
+        calls ajax function for yelp data call
 */
 function yelpSearchButton(){
   $('#yelpSearchButton').append(loadIcon).prop('disabled', true);
@@ -92,10 +94,11 @@ function yelpSearchButton(){
 **/
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
-* @returns: {undefined} none
-* function description
+* function name : randomThreeFood
+* @params {yelpArr} array of 20 different yelp data business 
+* @returns: {returnArr} array of 3 objects containing restaurant info
+* function description : receives an array of 20 different restaurants and picks out 3 
+          random restaurants out of the 20 and returns that array
 */
 function randomThreeFood(yelpArr){  
   var returnArr =[];

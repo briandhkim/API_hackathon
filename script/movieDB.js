@@ -29,10 +29,11 @@ function getGenreList(){
 }
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
+* function name : genrePullSuccess
+* @params {genres} : data object retrieved from ajax call for getting genre list 
 * @returns: {undefined} none
-* function description
+* function description : called if getGenreList call is completed successfully. updates the select option for 
+		movie genre options dynamically
 */
 function genrePullSuccess(genres){
 	// console.log(genres.genres);
@@ -99,10 +100,10 @@ function getMovieDB(){
 }
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
+* function name : movieDataSuccess
+* @params {dataM} movie data object received from movie database api
 * @returns: {undefined} none
-* function description
+* function description : DOM change to update new poster, movie name, rating, etc.
 */
 function movieDataSuccess(dataM){
 	/*
@@ -131,10 +132,12 @@ function movieDataFail(err){
 
 
 /***************************************************************************************************
-* function name 
+* function name : movieDbButtonClick
 * @params {undefined} none
 * @returns: {undefined} none
-* function description
+* function description : called when user clicks button for getting new movie
+		updates the data variables that need to be passed in to user input specific
+		calls ajax call function to get movie data
 */
 function movieDbButtonClick(){
 	$('#movieDBbutton').append(loadIcon).prop('disabled',true);
