@@ -26,7 +26,6 @@ function grabMoviesFromDataBase(){ // Gets ajax call on "document.ready" and on 
             	//here take out the edit made to button spin
             	$('#netflixSpinButton').removeClass('spinOnLoad');
             	$('#netflixSpinButton').prop('disabled', false);
-
             });
             renderMovieInfoToDom();	
 		},
@@ -39,10 +38,10 @@ function grabMoviesFromDataBase(){ // Gets ajax call on "document.ready" and on 
 
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
-* @returns: {undefined} none
-* function description
+* function name: netflixRouletteButton
+* @params {undefined}: none
+* @returns: {undefined}: none
+* function description: Waits for AJAX by using a spinner
 */
 function netflixRouletteButton(){
 	grabMoviesFromDataBase();
@@ -54,10 +53,10 @@ function netflixRouletteButton(){
 
 
 /***************************************************************************************************
-* function name 
+* function name: renderMovieInfoToDom
 * @params {undefined} none
 * @returns: {undefined} none
-* function description
+* function description: Takes then movie object's values and renders them to the screen
 */
 function renderMovieInfoToDom(){ // Gets movie info and places them into DOM elements 
 	var setDecimalForMovieRating = parseFloat(movie.rating);
