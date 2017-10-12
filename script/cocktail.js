@@ -15,7 +15,6 @@ function getRandomCocktailData(){
 		method: 'get',
 		success: function(drink_data){
 			promise.resolve(drink_data);
-			randomDrinkData = drink_data;
 		},
 		error: function(err){
 			promise.resolve(err);
@@ -35,10 +34,11 @@ function getRandomCocktailData(){
 **/
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
+* randCocktailSuccess
+* @params {undefined} drink_data (pulled from getRandomCocktailData())
 * @returns: {undefined} none
-* function description
+* Gets called when ajax call is successful. pull data from the ajax call and stores it in a variable and passes it into drinkDOMupdate function.
+ * @calls drinkDOMupdate(ct_data)
 */
 function randCocktailSuccess(drink_data){
     // console.log(drink_data.drinks[0]);
@@ -65,7 +65,6 @@ function getCocktailByIngredient(){
         method: 'get',
         success: function(drink_data){
             promise.resolve(drink_data);
-            drinkByIngredient = drink_data;
         },
         error: function(err){
             promise.resolve(err);
@@ -84,10 +83,11 @@ function getCocktailByIngredient(){
 **/
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
+* cocktailIngSuccess
+* @params {undefined} drink_data (pulled from getCocktailByIngredient())
 * @returns: {undefined} none
-* function description
+* Takes drink data from getCocktailByIngredient ajax call. Gets one random drink data from array of drinks. Sets the drink name to variable cocktail to be used in next ajax call.
+ * @calls calls getSpecificCocktailData() ajax call
 */
 function cocktailIngSuccess(drink_data){
     // console.log(drink_data);
@@ -118,8 +118,6 @@ function getSpecificCocktailData(){
         method: 'get',
         success: function(drink_data){
             promise.resolve(drink_data);
-            specificDrinkData = drink_data;
-            sendSpecificCocktailData();
         },
         error: function(err){
             promise.resolve(err);
@@ -132,10 +130,11 @@ function getSpecificCocktailData(){
 **/ 
 
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
+* cocktailSpecificSuccess
+* @params {undefined} drink_data (from getSpecificCocktailData())
 * @returns: {undefined} none
-* function description
+* Takes drink data from getSpecificCocktailData ajax call. Sends data to drinkDOMupdate(ct_data) to append it onto the DOM.
+ * @calls drinkDOMupdate(ct_data)
 */
 function cocktailSpecificSuccess(drink_data){
     console.log(drink_data);
@@ -149,10 +148,11 @@ function cocktailSpecificFail(err){
 
 
 /***************************************************************************************************
-* function name 
+* cocktailButton
 * @params {undefined} none
 * @returns: {undefined} none
-* function description
+* Function gets called when "get drink" button is clicked. If the value of userInput is random, calls getRandomCocktailData ajax function. If value is a specific liquor, it stores that value in variable liquor and passes it into getCocktailByIngredient ajax function to get data for that specific liquor type.
+ * @calls Based on conditional, calls specific ajax function.
 */
 function cocktailButton(){
     var userInput = $('#drinkSelect').val();
@@ -173,10 +173,10 @@ function cocktailButton(){
     return - nothing
 **/
 /***************************************************************************************************
-* function name 
-* @params {undefined} none
+* drinkDOMupdate
+* @params {undefined} ct_data
 * @returns: {undefined} none
-* function description
+* Appends data onto the DOM to be displayed on website in each corresponding section.
 */
 function drinkDOMupdate(ct_data){   
  // saving ingredient and measures data
