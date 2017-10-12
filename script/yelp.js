@@ -39,9 +39,9 @@ function getYelpData(){
 ***/
 
 function yelpSuccess(dat){
-  console.log(dat);
+  // console.log(dat);
   var threeYelp = randomThreeFood(dat.businesses);
-  console.log(threeYelp);
+  // console.log(threeYelp);
   for(var i=0; i<3; i++){
     $('#yelpResult'+(i+1)+'Name').text(threeYelp[i][0].name);
     $('.yelpResult'+(i+1) + ' img').attr('src', threeYelp[i][0].image_url);

@@ -28,7 +28,7 @@ function getGenreList(){
 	return promise;
 }
 function genrePullSuccess(genres){
-	console.log(genres.genres);
+	// console.log(genres.genres);
 	// genres.genres returns index of objects
 			// e.g. - id: 12, name: 'action'
 	for (var idx in genres.genres){
