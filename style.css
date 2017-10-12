@@ -184,11 +184,21 @@ html,body{
 }
 .cocktailBanner{
 	height: 12%;
-	font-family: 'Ubuntu Condensed', sans-serif;
+	font-family: 'Special Elite', cursive;
+	background-image: url('assets/drinkBackground.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.8;
 	/*border: 1px solid;*/
 }
 .ctBanner{
-	margin-left: 25px;
+	/*margin-left: 25px;*/
+	margin-right: 35px;
+	margin-bottom: 0;
+	text-shadow: 
+		1px 1px 0 #000,
+		-1px -1px 0 #000;
 }
 .cocktailBanner>.page-header{
 	margin: 0;
@@ -250,12 +260,12 @@ html,body{
 	height: 70%;
 	overflow: auto;
 }
-#ingredientsContainer::-webkit-scrollbar{
+#ingredientsContainer::-webkit-scrollbar, .cocktailInstructions::-webkit-scrollbar{
 	width: 15px;
 	border-radius: 10px;
 	background-color: rgba(0,150,136,0.7);
 }
-#ingredientsContainer::-webkit-scrollbar-thumb{
+#ingredientsContainer::-webkit-scrollbar-thumb, .cocktailInstructions::-webkit-scrollbar-thumb{
 	width: 8.5px;
 	border-radius: 15px;
 	background-color: #45526e;
@@ -269,7 +279,7 @@ html,body{
 }
 .cocktailInstructions{
 	height: 70%;
-	font-size: 2.5vh;
+	font-size: 3vh;
 	overflow: auto;
 	/*border: 1px solid;*/
 }
