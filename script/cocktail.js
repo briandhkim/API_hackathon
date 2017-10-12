@@ -1,5 +1,5 @@
-var liquor = null;
-var cocktail = null;
+var liquor = '';
+var cocktail ='';
 
 // getRandomCocktailData().then(randCocktailSuccess,randCocktailFail);
 function getRandomCocktailData(){
