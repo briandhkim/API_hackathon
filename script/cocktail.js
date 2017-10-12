@@ -151,7 +151,7 @@ function drinkDOMupdate(ct_data){
     var cocktailIngredients = [];
     var cocktailIngMeasures = [];
     for (var i=1; i<16; i++){
-        if(ct_data['strIngredient'+i]!==''){
+        if(ct_data['strIngredient'+i]!=='' && ct_data['strIngredient'+i]!==undefined){
             cocktailIngredients[i-1] = ct_data['strIngredient'+i];
             cocktailIngMeasures[i-1] = ct_data['strMeasure'+i];
         }

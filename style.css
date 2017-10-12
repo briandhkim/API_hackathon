@@ -35,11 +35,20 @@ html,body{
 	/*default display - block*/
 }
 .yelpDisplay{
-	background-color: lightyellow;
+	/*background-color: lightyellow;*/
 	/*display:none;*/
 }
-.yelpBanner{
+.yelpBanner {
 	height: 12%;
+	font-family: yelpFont;
+	background: #CD1F20;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #CD1F20, maroon);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #CD1F20, maroon); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-shadow: 
+	1px 1px 0 #FFF,
+	-1px -1px 0 #FFF,
+	2px 2px 0 #FFF,
+	3px 3px 0 #FFF;
 }
 .yelpH1{
 	margin-left: 20px;
@@ -104,9 +113,35 @@ html,body{
 	margin-top: 2%;
 	text-align: center;
 }
+.yelpResultPanel .panel-heading{
+	background: #CD1F20;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #CD1F20, maroon);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #CD1F20, maroon); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .yelpResultPanel .panel-body{
 	height: 235px;
 	padding: 0;
+}
+#yelpResult1Name, #yelpResult2Name, #yelpResult3Name{
+	color: white;
+	font-family: 'Special Elite', cursive;
+}
+#yelpResult1-price, #yelpResult2-price, #yelpResult3-price{
+	font-family: yelpFont;
+	/*color: rgba(211,35,35,1);*/
+	color: black;
+	text-shadow: 
+	0.5px 0.5px 0 #fff,
+	-0.5px -0.5px 0 #fff;
+}
+.yelpResultInfoList{
+	font-family: 'Special Elite', cursive;
+}
+.yelpResultInfoList span, .yelpResultInfoList button{
+	font-family: yelpFont;
+	color: rgba(211,35,35,1);
+	text-shadow: 
+	0.5px 0.5px 0 #000;
 }
 .yelpImgWrapper{
 	padding: 2%;
@@ -191,9 +226,6 @@ html,body{
 	height: 50%;
 	/*border: 1px solid red;*/
 }
-.cocktailIngredientRow{
-	overflow: auto;
-}
 .ingredientsList{
 	list-style-type: square;
 	font-size: 2.5vh;
@@ -210,7 +242,23 @@ html,body{
 	-1px -1px 0 #000;
 }
 .cocktailIngredientRow>h2{
+	height:20%;
 	font-size: 5vh;
+	margin-bottom: 0;
+}
+#ingredientsContainer{
+	height: 70%;
+	overflow: auto;
+}
+#ingredientsContainer::-webkit-scrollbar{
+	width: 15px;
+	border-radius: 10px;
+	background-color: rgba(0,150,136,0.7);
+}
+#ingredientsContainer::-webkit-scrollbar-thumb{
+	width: 8.5px;
+	border-radius: 15px;
+	background-color: #45526e;
 }
 .cocktailInstructionRow>h2{
 	height: 30%;
@@ -443,18 +491,6 @@ html,body{
 .netflixSummary {
 	font-size: 3vh;
 	text-align: center;
-}
-
-.yelpBanner {
-	font-family: yelpFont;
-	background: #CD1F20;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #CD1F20, maroon);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #CD1F20, maroon); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	text-shadow: 
-	1px 1px 0 #FFF,
-	-1px -1px 0 #FFF,
-	2px 2px 0 #FFF,
-	3px 3px 0 #FFF;
 }
 
 .yelpGradent{

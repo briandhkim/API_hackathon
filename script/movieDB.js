@@ -1,5 +1,5 @@
 var lowestRating = 0;
-var highestRating = 9;
+var highestRating = 4;
 var releaseMin = "2001-01-05";
 var releaseMax = "2017-01-02";
 var genres = "";
@@ -108,12 +108,15 @@ function movieDataSuccess(dataM){
 	$('.movTitle').text(movie.title);
 	$('.movieDBrating').text(movie.vote_average);
 	$('.movieDbTitle').css('background-image', 'url("https://image.tmdb.org/t/p/w500'+movie.backdrop_path+'")');
+	$('#movieDBbutton .fa-spinner').remove();
+	$('#movieDBbutton').prop('disabled', false)
 }
 function movieDataFail(err){
 	console.log(err);
 }
 
 function movieDbButtonClick(){
+	$('#movieDBbutton').append(loadIcon).prop('disabled',true);
 	var minRating = $('#minMovieRange').val();	//returns null if nothing selected
 	if(minRating!==null){
 		lowestRating= parseInt(minRating);

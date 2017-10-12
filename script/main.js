@@ -51,3 +51,10 @@ function movieOpenClick(){
 	$('.yelpDisplay, .cocktailDisplay').css('display','none');
 }
 
+var loadIcon = $('<i>',{
+    class: 'fa fa-spinner fa-spin loadicon'
+    // id: 'loadicon'
+});
+var largeLoadIcon = $('<i>',{
+    class: 'fa fa-spinner fa-spin loadicon fa-5x'
+});

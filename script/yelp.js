@@ -40,6 +40,10 @@ function getYelpData(){
 
 function yelpSuccess(dat){
   // console.log(dat);
+  $('#yelpSearchButton .fa-spinner').remove();
+  $('.fa-5x').remove();
+  $('.yelpImgWrapper').removeClass('hm-stylish-strong').addClass('overlay');
+  $('#yelpSearchButton').prop('disabled', false);
   var threeYelp = randomThreeFood(dat.businesses);
   // console.log(threeYelp);
   for(var i=0; i<3; i++){
@@ -56,6 +60,9 @@ function yelpFail(er){
 }
 
 function yelpSearchButton(){
+  $('#yelpSearchButton').append(loadIcon).prop('disabled', true);
+  $('.yelpImgWrapper .mask').append(largeLoadIcon);
+  $('.yelpImgWrapper').removeClass('overlay').addClass('hm-stylish-strong');
   var yelpZip = $('#yelpZip').val();
   if(yelpZip!==''){
     zipcode = yelpZip;
